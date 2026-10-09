@@ -1,0 +1,123 @@
+/**************************CSS Reset**************************/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  interpolate-size: allow-keywords;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+img,
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+label {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  font-size: max(1em, 16px);
+}
+
+textarea {
+  resize: none;
+  min-height: 4lh;
+}
+
+legend {
+  padding: 0;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+/************************ Fonts ****************************/
+body {
+  background-color: var(--color-light);
+  color: var(--color-green900);
+}
+h1 {
+  font-family: "Outfit";
+  font-size: 64px;
+  font-weight: 400;
+}
+h2 {
+  font-family: "Outfit";
+  font-size: 40px;
+  font-weight: 300;
+}
+h3 {
+  font-family: "Outfit";
+  font-size: 32px;
+  font-weight: 300;
+}
+h4 {
+  font-family: "Outfit";
+  font-size: 24px;
+  font-weight: 400;
+}
+p {
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-weight: 400;
+}
+p.caps {
+  text-transform: uppercase;
+}
+p.caps_thin {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+a {
+  font-family: "DM Sans";
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-green900);
+}
+a.cta-btn,
+.btn {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/****************************Button**************************/
+.cta-btn {
+  display: block;
+  background-color: var(--color-orange);
+  width: fit-content;
+  height: 48px;
+  align-content: center;
+  padding-inline: 1.5rem;
+  border-radius: 100px;
+  color: var(--color-light);
+}
+.cta-btn:hover {
+  background-color: var(--color-green900);
+}
