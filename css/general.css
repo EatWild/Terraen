@@ -117,8 +117,16 @@ a.navlink {
   font-family: "Outfit";
   font-size: 18px;
 }
-.orange {
+#orange {
   color: var(--color-orange);
+}
+p.footerlogo {
+  font-family: "Outfit";
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-light);
 }
 /****************************Button**************************/
 .cta-btn {
@@ -234,7 +242,7 @@ header {
     display: block;
     height: 1px;
     width: 100%;
-    background-color: rgb(170, 134, 88);
+    background-color: var(--color-light300);
   }
   a {
     display: block;
@@ -247,7 +255,110 @@ header {
 .line {
   display: none;
 }
-@media (min-width: 800px) {
+/* Footer ***************************************************/
+footer {
+  width: 100%;
+  justify-content: center;
+  background-color: var(--color-green700);
+  padding-block: 65px 85px;
+  margin-top: 85px;
+  p.caps {
+    width: 290px;
+    letter-spacing: 6%;
+    margin-inline: 1rem;
+  }
+}
+.footernav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  color: var(--color-light);
+  row-gap: 3rem;
+  justify-content: center;
+  max-width: 1200px;
+  .logo {
+    position: relative;
+    align-items: start;
+    width: fit-content;
+    max-width: 287px;
+    width: 100%;
+    padding: 0;
+    margin: 0 1.5rem 3.5rem;
+    img {
+      max-width: 48px;
+      margin-top: 20px;
+    }
+    p.samarbejde {
+      position: absolute;
+      top: 110px;
+      font-style: italic;
+      color: var(--color-light300);
+      font-weight: 200;
+      letter-spacing: 11%;
+      opacity: 0.7;
+    }
+  }
+}
+.logo-txt-box {
+  display: grid;
+  p.logo-txt {
+    line-height: 1px;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: none;
+    letter-spacing: 0.7px;
+  }
+}
+.footermenu {
+  list-style: none;
+  padding-inline: 1.5rem;
+  align-content: center;
+  width: 320px;
+  a.navlink {
+    display: block;
+    color: var(--color-light);
+    font-weight: 300;
+    padding-block: 0.25rem;
+  }
+}
+.nyhedsbrev {
+  color: var(--color-light);
+  width: 100%;
+  justify-items: center;
+  align-content: center;
+}
+.tilmeld {
+  display: flex;
+  input {
+    border: none;
+    color: var(--color-green900);
+    background-color: var(--color-light);
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+  input:focus-visible {
+    outline: none;
+  }
+  a.cta-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+/* Desktop */
+@media (min-width: 600px) {
+  .footernav {
+    row-gap: 5rem;
+  }
+  .footermenu,
+  .nyhedsbrev {
+    width: fit-content;
+  }
+  .nyhedsbrev {
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 845px) {
   .menuikon {
     display: none;
   }
@@ -257,4 +368,12 @@ header {
     padding-right: 1rem;
   }
 }
-/* Footer */
+@media (min-width: 948px) {
+  footer {
+    padding-block: 105px 140px;
+  }
+  .footernav {
+    column-gap: 0;
+    justify-content: space-between;
+  }
+}
