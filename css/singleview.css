@@ -12,3 +12,401 @@ Just in case;
 Hvid: var(--color-white);
 Sort: var(--color-black);
 */
+
+/* =========================================================
+   SINGLEVIEW – Mobile first
+   Bygger videre på custom.css (farver) og general.css
+   (reset, fonte og .cta-btn). De filer ændres ikke.
+   ========================================================= */
+
+/* Sidemargin – skifter på tablet og desktop længere nede */
+.singleview {
+  --side-margin: 24px;
+}
+
+/* Lister uden prikker/tal */
+.breadcrumbs ol,
+.trin-liste,
+.ingrediens-liste { list-style: none; }
+
+/* ---------- Fælles små ting ---------- */
+
+/* Bruges sammen med jeres p.caps */
+.lille-overskrift {
+  letter-spacing: 0.08em;
+  color: var(--color-green700);
+}
+
+/* ---------- Hero ---------- */
+
+.opskrift-top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+/* På mobil står billedet øverst, brødkrummer under */
+.opskrift-billede {
+  order: -1;
+  width: 100%;
+  aspect-ratio: 1184 / 1120;
+  object-fit: cover;
+}
+
+.breadcrumbs { padding: 0 var(--side-margin); }
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-size: 14px;
+}
+.breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 10px;
+}
+.breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumb-navn {
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.opskrift-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 var(--side-margin);
+}
+
+.opskrift-titel {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-green900);
+}
+
+
+.info-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+  color: var(--color-black);
+}
+.info-liste dt {
+  color: var(--color-green400); /* grøn overskrift, som i Figma */
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.info-liste dd {
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Opskrift (fremgangsmåde + pakkeliste) ---------- */
+
+.opskrift-detaljer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 80px;
+}
+
+.fremgangsmaade {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 var(--side-margin);
+}
+.fremgangsmaade-titel {
+  padding-bottom: 12px;
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  color: var(--color-green400);
+}
+.trin-liste li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-green900);
+}
+.trin-nummer {
+  flex-shrink: 0;
+  font-family: "Outfit";
+  font-size: 31px;
+  color: var(--color-green400);
+}
+.trin-liste p {
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.pakkeliste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 32px 48px;
+  background: var(--color-white);
+  color: var(--color-green900);
+}
+.pakkeliste-titel {
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+}
+.pakkeliste-tekst {
+  padding: 12px 0;
+  font-family: "DM Sans";
+  font-size: 15px;
+  line-height: 1.33;
+}
+.ingrediens-liste li {
+  border-top: 1px solid var(--color-green400);
+  padding-top: 10px;
+  margin-top: 0;
+}
+.ingrediens-liste li + li { margin-top: 10px; }
+.ingrediens-liste label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+/* Flueben (checkbox) */
+.ingrediens-liste input {
+  appearance: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1.5px solid var(--color-green900);
+  border-radius: 2px;
+  background: transparent;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.ingrediens-liste input::after {
+  content: "";
+  width: 6px;
+  height: 11px;
+  margin-top: -2px;
+  border: solid var(--color-light);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform .15s;
+}
+.ingrediens-liste input:checked { background: var(--color-green900); }
+.ingrediens-liste input:checked::after { transform: rotate(45deg) scale(1); }
+.ingrediens-liste input:focus-visible { outline: 2px solid var(--color-orange); outline-offset: 2px; }
+.ingrediens-liste input:checked + span {
+  text-decoration: line-through;
+  opacity: .6;
+}
+
+
+/* ---------- Udstyr til turen (Spejdersport) ---------- */
+
+.udstyr {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 80px;
+  padding: 80px var(--side-margin);
+  background-color: var(--color-green700);
+  color: var(--color-light);
+}
+
+/* Billede med samarbejds-tag ovenpå */
+.udstyr-billede {
+  position: relative;
+}
+.udstyr-billede img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.samarbejde-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background-color: var(--color-orange);
+  color: var(--color-light);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.udstyr-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.udstyr .lille-overskrift { color: var(--color-light); }
+.udstyr-titel {
+  font-size: 36px;
+  color: var(--color-light);
+}
+.udstyr-tekst p:not(.lille-overskrift) {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.udstyr-knap { margin-top: 16px; }
+
+/* Jeres .cta-btn bliver grøn ved hover – på den mørke baggrund bliver den lys i stedet */
+.udstyr .cta-btn:hover {
+  background-color: var(--color-light);
+  color: var(--color-green900);
+}
+
+/* På mobil fylder knappen hele bredden (som i Figma) */
+.udstyr-knap {
+  width: 100%;
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (min-width: 768px) {
+  .singleview { --side-margin: 48px; }
+
+  .opskrift-titel { font-size: 56px; }
+
+  .info-liste {
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  .udstyr-knap {
+    align-self: flex-start;
+    width: fit-content;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+@media (min-width: 1200px) {
+  .singleview { --side-margin: 144px; }
+
+  .singleview { padding-top: 80px; } /* plads til header */
+
+  /* Hero: brødkrummer øverst, billede venstre, tekst højre */
+  .opskrift-top {
+    display: grid;
+    grid-template-columns: 478px 1fr;
+    grid-template-areas:
+      "crumbs crumbs"
+      "img    txt";
+    column-gap: 40px;
+    row-gap: 0;
+    padding: 0 var(--side-margin) 80px;
+  }
+  .breadcrumbs {
+    grid-area: crumbs;
+    padding: 60px 0 20px;
+  }
+  .breadcrumbs ol {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    gap: 12px;
+  }
+  .breadcrumbs li + li::before { margin-right: 12px; }
+
+  .opskrift-billede {
+    grid-area: img;
+    order: 0;
+    height: 452px;
+    aspect-ratio: auto;
+  }
+  .opskrift-tekst {
+    grid-area: txt;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0;
+  }
+  .opskrift-titel {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: .95;
+    letter-spacing: .04em;
+    color: var(--color-black);
+  }
+  .info-liste { padding: 0; }
+  .info-liste dd {
+    font-family: "Outfit";
+    font-weight: 200;
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
+  /* Pakkeliste venstre, fremgangsmåde højre */
+  .opskrift-detaljer {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 40px var(--side-margin) 80px;
+  }
+  .pakkeliste {
+    order: -1;
+    flex: 0 0 500px;
+  }
+  .pakkeliste-titel {
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+  .fremgangsmaade {
+    flex: 1;
+    padding: 0;
+  }
+  .fremgangsmaade-titel {
+    font-family: "Inter";
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* Udstyr: billede venstre, tekst højre */
+  .udstyr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 198px;
+  }
+  .udstyr-titel { font-size: 48px; }
+  .udstyr-tekst p:not(.lille-overskrift) {
+    max-width: 480px;
+    font-size: 17px;
+  }
+}
