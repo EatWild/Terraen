@@ -1,37 +1,13 @@
-/*
-Mini guide, bare slet dette hvis det er irrelevant for dig
-
-Farve variabler:
-Eggwhite: var(--color-light);  (Den vi bruger som hvid)
-Grøn: var(--color-green400);
-Mørkegrøn: var(--color-green700);
-Sortgrøn: var(--color-green900);  (Den vi bruger som sort)
-CTA-Orange: var(--color-orange);
-
-Just in case;
-Hvid: var(--color-white);
-Sort: var(--color-black);
-*/
-
-/* =========================================================
-   SINGLEVIEW – Mobile first
-   Bygger videre på custom.css (farver) og general.css
-   (reset, fonte og .cta-btn). De filer ændres ikke.
-   ========================================================= */
-
-/* Sidemargin – skifter på tablet og desktop længere nede */
 .singleview {
   --side-margin: 24px;
 }
 
-/* Lister uden prikker/tal */
 .breadcrumbs ol,
 .trin-liste,
-.ingrediens-liste { list-style: none; }
+.ingrediens-liste {
+  list-style: none;
+}
 
-/* ---------- Fælles små ting ---------- */
-
-/* Bruges sammen med jeres p.caps */
 .lille-overskrift {
   letter-spacing: 0.08em;
   color: var(--color-green700);
@@ -46,7 +22,6 @@ Sort: var(--color-black);
   padding-bottom: 60px;
 }
 
-/* På mobil står billedet øverst, brødkrummer under */
 .opskrift-billede {
   order: -1;
   width: 100%;
@@ -54,7 +29,9 @@ Sort: var(--color-black);
   object-fit: cover;
 }
 
-.breadcrumbs { padding: 0 var(--side-margin); }
+.breadcrumbs {
+  padding: 0 var(--side-margin);
+}
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +48,9 @@ Sort: var(--color-black);
   color: inherit;
   text-decoration: none;
 }
-.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
 .breadcrumb-navn {
   font-family: "Inter";
   font-weight: 600;
@@ -93,7 +72,6 @@ Sort: var(--color-black);
   color: var(--color-green900);
 }
 
-
 .info-liste {
   display: flex;
   flex-direction: column;
@@ -102,7 +80,7 @@ Sort: var(--color-black);
   color: var(--color-black);
 }
 .info-liste dt {
-  color: var(--color-green400); /* grøn overskrift, som i Figma */
+  color: var(--color-green700);
   font-family: "DM Sans";
   font-weight: 600;
   font-size: 16px;
@@ -138,20 +116,20 @@ Sort: var(--color-black);
   font-weight: 300;
   font-size: 36px;
   letter-spacing: 0.02em;
-  color: var(--color-green400);
+  color: var(--color-green700);
 }
 .trin-liste li {
   display: flex;
   align-items: center;
   gap: 24px;
   padding: 16px 0;
-  border-top: 1px solid var(--color-green900);
+  border-top: 1px solid var(--color-green400);
 }
 .trin-nummer {
   flex-shrink: 0;
   font-family: "Outfit";
   font-size: 31px;
-  color: var(--color-green400);
+  color: var(--color-green700);
 }
 .trin-liste p {
   font-family: "DM Sans";
@@ -167,7 +145,7 @@ Sort: var(--color-black);
   gap: 10px;
   padding: 32px 48px;
   background: var(--color-white);
-  color: var(--color-green900);
+  color: var(--color-green700);
 }
 .pakkeliste-titel {
   font-family: "Outfit";
@@ -186,7 +164,9 @@ Sort: var(--color-black);
   padding-top: 10px;
   margin-top: 0;
 }
-.ingrediens-liste li + li { margin-top: 10px; }
+.ingrediens-liste li + li {
+  margin-top: 10px;
+}
 .ingrediens-liste label {
   display: flex;
   align-items: center;
@@ -220,16 +200,22 @@ Sort: var(--color-black);
   border: solid var(--color-light);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg) scale(0);
-  transition: transform .15s;
+  transition: transform 0.15s;
 }
-.ingrediens-liste input:checked { background: var(--color-green900); }
-.ingrediens-liste input:checked::after { transform: rotate(45deg) scale(1); }
-.ingrediens-liste input:focus-visible { outline: 2px solid var(--color-orange); outline-offset: 2px; }
+.ingrediens-liste input:checked {
+  background: var(--color-green900);
+}
+.ingrediens-liste input:checked::after {
+  transform: rotate(45deg) scale(1);
+}
+.ingrediens-liste input:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+}
 .ingrediens-liste input:checked + span {
   text-decoration: line-through;
-  opacity: .6;
+  opacity: 0.6;
 }
-
 
 /* ---------- Udstyr til turen (Spejdersport) ---------- */
 
@@ -269,7 +255,9 @@ Sort: var(--color-black);
   flex-direction: column;
   gap: 16px;
 }
-.udstyr .lille-overskrift { color: var(--color-light); }
+.udstyr .lille-overskrift {
+  color: var(--color-light);
+}
 .udstyr-titel {
   font-size: 36px;
   color: var(--color-light);
@@ -279,15 +267,16 @@ Sort: var(--color-black);
   line-height: 1.4;
 }
 
-.udstyr-knap { margin-top: 16px; }
+.udstyr-knap {
+  margin-top: 16px;
+}
 
-/* Jeres .cta-btn bliver grøn ved hover – på den mørke baggrund bliver den lys i stedet */
+/* cta-btn "Gå til spejdersport" */
 .udstyr .cta-btn:hover {
   background-color: var(--color-light);
   color: var(--color-green900);
 }
 
-/* På mobil fylder knappen hele bredden (som i Figma) */
 .udstyr-knap {
   width: 100%;
   text-align: center;
@@ -297,9 +286,13 @@ Sort: var(--color-black);
    TABLET
    ========================================================= */
 @media (min-width: 768px) {
-  .singleview { --side-margin: 48px; }
+  .singleview {
+    --side-margin: 48px;
+  }
 
-  .opskrift-titel { font-size: 56px; }
+  .opskrift-titel {
+    font-size: 56px;
+  }
 
   .info-liste {
     flex-direction: row;
@@ -316,9 +309,13 @@ Sort: var(--color-black);
    DESKTOP
    ========================================================= */
 @media (min-width: 1200px) {
-  .singleview { --side-margin: 144px; }
+  .singleview {
+    --side-margin: 144px;
+  }
 
-  .singleview { padding-top: 80px; } /* plads til header */
+  .singleview {
+    padding-top: 80px;
+  }
 
   /* Hero: brødkrummer øverst, billede venstre, tekst højre */
   .opskrift-top {
@@ -340,7 +337,9 @@ Sort: var(--color-black);
     letter-spacing: 0.02em;
     gap: 12px;
   }
-  .breadcrumbs li + li::before { margin-right: 12px; }
+  .breadcrumbs li + li::before {
+    margin-right: 12px;
+  }
 
   .opskrift-billede {
     grid-area: img;
@@ -357,11 +356,13 @@ Sort: var(--color-black);
   .opskrift-titel {
     font-weight: 300;
     font-size: 64px;
-    line-height: .95;
-    letter-spacing: .04em;
+    line-height: 0.95;
+    letter-spacing: 0.04em;
     color: var(--color-black);
   }
-  .info-liste { padding: 0; }
+  .info-liste {
+    padding: 0;
+  }
   .info-liste dd {
     font-family: "Outfit";
     font-weight: 200;
@@ -396,7 +397,7 @@ Sort: var(--color-black);
     letter-spacing: 0;
   }
 
-  /* Udstyr: billede venstre, tekst højre */
+  /* Udstyr til turen: billede venstre, tekst højre */
   .udstyr {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -404,7 +405,9 @@ Sort: var(--color-black);
     gap: 80px;
     margin-bottom: 198px;
   }
-  .udstyr-titel { font-size: 48px; }
+  .udstyr-titel {
+    font-size: 48px;
+  }
   .udstyr-tekst p:not(.lille-overskrift) {
     max-width: 480px;
     font-size: 17px;
