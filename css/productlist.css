@@ -17,7 +17,7 @@ section {
   width: 100%;
   background-color: var(--color-light300);
 }
-button.nulstil {
+a.nulstil {
   font-weight: 600;
   text-decoration: underline;
   text-transform: uppercase;
@@ -41,8 +41,10 @@ button.nulstil {
     border-radius: 40px;
     cursor: pointer;
   }
-  button:hover {
-    background-color: var(--color-light300);
+  button:hover,
+  button.active-btn {
+    background-color: var(--color-green400);
+    color: var(--color-light);
   }
 }
 .opskrift-container {

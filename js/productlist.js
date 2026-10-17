@@ -1,87 +1,72 @@
 const currentUrl = `https://dummyjson.com/recipes?limit=50`;
 const listContainer = document.querySelector(".opskrift-container");
 let allData = [];
+let selectedWeight = "alle";
+let selectedTime = "alle";
 
 //HENT DATA
 function getData() {
   fetch(currentUrl).then((result) =>
     result.json().then((data) => {
       allData = data.recipes;
-      showData(allData);
+      showData(data.recipes);
     }),
   );
 }
 //FILTRE---------------------------------------------------------------------------------------------------
-//Udregning/"lommeregner"
-const udregnTid = (forberedelsesTid, tilberedningsTid) => {
-  return forberedelsesTid + tilberedningsTid;
-};
 //Vægt (antal ingredienser)--------------------------------------
 document.querySelectorAll(".oppakning button").forEach((btn) => {
   btn.addEventListener("click", btnClickedWeight);
 });
 function btnClickedWeight(event) {
-  const selectedWeight = event.target.dataset.oppakning;
-  console.log(event.target.dataset.oppakning);
-
-  if (selectedWeight === "alle") {
-    showData(allData);
-    return;
-  }
-
-  const filteredRecipes = allData.filter((recipe) => {
-    const totalIngredients = recipe.ingredients.length;
-
-    if (selectedWeight === "lett") {
-      return totalIngredients <= 5;
-    }
-    if (selectedWeight === "mellem") {
-      return totalIngredients > 5 && totalIngredients <= 9;
-    }
-    if (selectedWeight === "tung") {
-      return totalIngredients > 9;
-    }
+  document.querySelectorAll(".oppakning button").forEach((btn) => {
+    btn.classList = "";
   });
-
-  showData(filteredRecipes);
+  event.target.classList.add("active-btn");
+  selectedWeight = event.currentTarget.dataset.oppakning;
+  filterRecipes();
 }
 //Tid i alt-------------------------------------------------------
 document.querySelectorAll(".total-tid button").forEach((btn) => {
   btn.addEventListener("click", btnClickedTime);
 });
 function btnClickedTime(event) {
-  const selectedTime = event.currentTarget.dataset.tid;
-  console.log(event.currentTarget.dataset.tid);
+  document.querySelectorAll(".total-tid button").forEach((btn) => {
+    btn.classList = "";
+  });
+  event.target.classList.add("active-btn");
+  selectedTime = event.currentTarget.dataset.tid;
+  filterRecipes();
+}
+// //Udregning/"lommeregner"
+const udregnTid = (forberedelsesTid, tilberedningsTid) => {
+  return forberedelsesTid + tilberedningsTid;
+};
 
-  if (selectedTime === "alle") {
-    showData(allData);
-    return;
-  }
-
+//Kombinering af filtre---------------------------------------------
+//filterRecipes() tjekker begge betingelser og returnerer matchesWeight && matchesTime.
+function filterRecipes() {
   const filteredRecipes = allData.filter((recipe) => {
+    const totalIngredients = recipe.ingredients.length;
     const totalTime = udregnTid(recipe.prepTimeMinutes, recipe.cookTimeMinutes);
 
-    if (selectedTime === "0-20") {
-      return totalTime <= 20;
-    }
-    if (selectedTime === "20-45") {
-      return totalTime > 20 && totalTime <= 45;
-    }
-    return totalTime > 45;
+    const matchesWeight = selectedWeight === "alle" || (selectedWeight === "lett" && totalIngredients <= 5) || (selectedWeight === "mellem" && totalIngredients > 5 && totalIngredients <= 9) || (selectedWeight === "tung" && totalIngredients > 9);
+
+    const matchesTime = selectedTime === "alle" || (selectedTime === "0-20" && totalTime <= 20) || (selectedTime === "20-45" && totalTime > 20 && totalTime <= 45) || (selectedTime === "over45" && totalTime > 45);
+
+    return matchesWeight && matchesTime;
   });
 
   showData(filteredRecipes);
 }
-
 //VISNING AF DATA--------------------------------------------------------------------------------------------------------
 function showData(recipes) {
   console.log(recipes);
   listContainer.innerHTML = "";
+  document.querySelector(".antal").innerHTML = `<strong>${recipes.length}</strong>`;
   let newInnerHTML = "";
 
   recipes.forEach((recipe) => {
-    // console.log(udregnTid(recipe.prepTimeMinutes, recipe.cookTimeMinutes));
-    // ${udregnTid(recipe.prepTimeMinutes, recipe.cookTimeMinutes)}
     newInnerHTML += `
           <a href="singleview.html?id=${recipe.id}" class="opskrift">
             <img src="https://cdn.dummyjson.com/recipe-images/${recipe.id}.webp" alt="Billede af ${recipe.name}" />
