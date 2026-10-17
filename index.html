@@ -21,16 +21,125 @@
     <header></header>
 
     <main>
-        <h1>Header</h1>
-        <h2>Header</h2>
-        <h3>Header</h3>
-        <h4>Header</h4>
-        <p>Her er noget tekst</p>
-        <p class="caps">Her er noget tekst i capslock</p>
-        <p class="caps_thin">Her er noget tyndt tekst i capslock</p>
-        <a href="/">Her er et link tekst</a>
-        <br>
-        <a href="/" class="cta-btn">Her er en knap</a>
+        <section class="hero">
+            <img src="imgs/hero.webp" alt="Et billede af en masse bjerge">
+            <div class="hero_text">
+                <h1>Terræn</h1>
+                <h2>Mad til hvor du er</h2>
+                <a href="/" class="cta-btn">Se Opskrifter</a>
+            </div>
+        </section>
+
+        <div class="our_idea">
+            <img class="detail" src="imgs/image_61.svg" alt="et buende mønster oven på grøn farve">
+            <p class="caps_thin ide">Vores ide</p>
+            <h3>Fire landskaber, halvtreds opskrifter, én simpel tanke:</h3>
+            <p>Maden skal passe til omgivelserne, til rygsækken og til udstyret.</p>
+        </div>
+        <section class="gallery_section">
+            <h3>Hvor skal du hen?</h3>
+            <p>Vælg et landskab, og vi viser maden der hører til. Derefter kan du filtrere på ønsket oppakningsvægt og
+                tilberedningstid.
+            </p>
+            <div class="gallery_wrapper">
+                <button class="gallery_arrow prev" aria-label="Scroll til forrige billeder">&#10094</button>
+                <div class="gallery_track" id="galleryTrack">
+                    <article class="gallery_card">
+                        <div class="gallery_image_wrap">
+                            <img src="imgs/beach.webp"
+                                alt="Et billede af en sand banke med marehalm, og havet i baggrunden">
+                            <div class="gallery_overlay hover beach">
+                                <h4>Stranden</h4>
+                                <p>14 retter <i class="right arrow"></i></p>
+                                <div class="hover_text">
+                                    <p>tekst der skal "poppe op"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery_card">
+                        <div class="gallery_image_wrap">
+                            <img src="imgs/forest.webp" alt="Et billede af en lysning i en løvtæt skov">
+                            <div class="gallery_overlay hover forest">
+                                <h4>Skoven</h4>
+                                <p>14 retter <i class="right arrow"></i></p>
+                                <div class="hover_text">
+                                    <p>tekst der skal "poppe op"</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery_card">
+                        <div class="gallery_image_wrap">
+                            <img src="imgs/lake.webp"
+                                alt="Et billede af en sø med skov og bjerge på den modsatte søbred">
+                            <div class="gallery_overlay hover">
+                                <h4>Søen</h4>
+                                <p>10 retter <i class="right arrow"></i></p>
+                                <div class="hover_text">
+                                    <p>Ro ved vandet. Morgenmad, rejer og søde stunder.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="gallery_card">
+                        <div class="gallery_image_wrap">
+                            <img src="imgs/mountain.webp"
+                                alt="Et billede af forskellige bjergrygge og lavthængende skyer">
+                            <div class="gallery_overlay hover">
+                                <h4>Bjergene</h4>
+                                <p class="light">14 retter <i class="right arrow"></i></p>
+                                <div class="hover_text">
+                                    <p>Adrenelin i højderne. Mad med god energi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+                <button class="gallery_arrow next" aria-label="Scroll til næste billede">&#10095</button>
+            </div>
+            <div class="gallery_dots" id="galleryDots">
+                <button class="dot active" aria-label="Første position"></button>
+                <button class="dot" aria-label="Anden position"></button>
+                <button class="dot" aria-label="Tredje position"></button>
+                <button class="dot" aria-label="Fjerde position"></button>
+            </div>
+        </section>
+
+        <div class="our_idea">
+            <img class="detail" src="imgs/image_61.svg" alt="et buende mønster oven på grøn farve">
+            <h3>Tre spørgsmål til at,</h3>
+            <h3>finde den rigtige ret:</h3>
+            <div class="q_icons">
+                <div>
+                    <img src="imgs/fire_symbol.svg" alt="Et ikon der ligner et bål">
+                    <p>Hvilket udstyr bruger du?</p>
+                </div>
+                <div>
+                    <img src="imgs/clock_symbol.svg" alt="Et ikon der ligner et vægur">
+                    <p>Hvor lang tid vil du bruge?</p>
+                </div>
+                <div>
+                    <img src="imgs/backpack_symbol.svg" alt="Et ikon der ligner en rygsæk">
+                    <p>Hvor meget kan du bære?</p>
+                </div>
+            </div>
+            <a href="/" class="cta-btn qa">Find din opskrift</a>
+        </div>
+        <p class="caps">Merch plads - til hvis siden bliver lavet</p>
+
+        <div class="citat">
+            <img src="imgs/banner.webp" alt="Et billede af en bjergryg i front med flere bjergrygge i baggrunden">
+            <h2>"Mad smager bare bedre ude i naturen."</h2>
+            <p>- <i>Terræn</i></p>
+        </div>
+
+
     </main>
 
     <footer></footer>
