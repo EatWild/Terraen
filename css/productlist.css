@@ -1,0 +1,56 @@
+section {
+  display: grid;
+  gap: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  place-self: center;
+  padding: 1rem 1.5rem;
+}
+.txt {
+  p.caps {
+    color: var(--color-green400);
+  }
+}
+.line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-light300);
+}
+p.nulstil {
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: end;
+}
+.filter-btns {
+  display: grid;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  button {
+    font-family: "DM Sans";
+    padding: 5px 1rem;
+    border: 1px solid var(--color-green700);
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: var(--color-light300);
+  }
+}
+.opskrift-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .opskrift-container {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    row-gap: 2rem;
+  }
+}
