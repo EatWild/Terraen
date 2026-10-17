@@ -46,44 +46,45 @@
       <section class="txt">
         <p class="caps">Opskrifter</p>
         <h1 class="mobil">Find maden til din tur</h1>
-        <p>Kombinér de tre filtre. Tallene viser, hvor mange retter du får med de valg, du allerede har taget</p>
+        <p>Find retter ved hjælp af filtrene, der kan sortere efter retternes vægt, tid, eller efter hvilket tilberedningsudstyr du har med.</p>
         <span class="line"></span>
       </section>
       <section class="filters">
-        <div class="filter-btns oppakning">
-          <p class="caps"><strong>Oppakning</strong></p>
-          <div class="flex-wrap">
-            <button data-filter="all">Alle</button>
-            <button data-filter="let">Let</button>
-            <button data-filter="">Mellem</button>
-            <button data-filter="">Tung</button>
+        <div class="filter-btns">
+          <p class="caps"><strong>Oppaknings vægt</strong></p>
+          <div class="flex-wrap oppakning">
+            <button data-oppakning="alle">Alle</button>
+            <button data-oppakning="lett">Let</button>
+            <button data-oppakning="mellem">Mellem</button>
+            <button data-oppakning="tung">Tung</button>
           </div>
         </div>
 
-        <div class="filter-btns total-tid">
+        <div class="filter-btns">
           <p class="caps"><strong>Tid i alt</strong></p>
-          <div class="flex-wrap">
-            <button data-filter="all">Alle</button>
-            <button data-filter="">Hurtig</button>
-            <button data-filter="">Medium</button>
-            <button data-filter="">Lang</button>
+          <div class="flex-wrap total-tid">
+            <button data-tid="alle">Alle</button>
+            <button data-tid="0-20">0 - 20min</button>
+            <button data-tid="20-45">20 - 45min</button>
+            <button data-tid="over45">45min +</button>
           </div>
         </div>
 
-        <div class="filter-btns udstyr">
+        <div class="filter-btns">
           <p class="caps"><strong>Udstyr</strong></p>
-          <div class="flex-wrap">
-            <button data-filter="all">Alle</button>
-            <button data-filter="">Bål & Rist</button>
-            <button data-filter="">Trangia</button>
-            <button data-filter="">Gryde over bål</button>
-            <button data-filter="">Pande</button>
-            <button data-filter="">Spyd</button>
-            <button data-filter="">Forberedt hjemme</button>
-            <button data-filter="">Ingen ild</button>
+          <div class="flex-wrap udstyr">
+            <button data-udstyr="alle">Alle</button>
+            <button data-udstyr="grill">Bål & Rist</button>
+            <button data-udstyr="">Trangia</button>
+            <button data-udstyr="">Gryde over bål</button>
+            <button data-udstyr="">Pande</button>
+            <button data-udstyr="spyd">Spyd</button>
+            <button data-udstyr="alle">Forberedt hjemme</button>
+            <button data-udstyr="none">Ingen ild</button>
           </div>
         </div>
-        <p class="caps nulstil">Nulstin alle filtre</p>
+        <button data-filter="" class="nulstil">Nulstil alle filtre</button>
+
         <span class="line"></span>
       </section>
       <section>
@@ -95,10 +96,10 @@
           </p>
         </div>
         <div class="opskrift-container">
-          <div class="opskrift">
+          <a href="singleview.html" class="opskrift">
             <img src="imgs/logo-sort.webp" alt="" />
-            <h4>Opskrift navn</h4>
-          </div>
+            <h4 class="mobil">Opskrift navn</h4>
+          </a>
         </div>
       </section>
     </main>

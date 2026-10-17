@@ -17,10 +17,12 @@ section {
   width: 100%;
   background-color: var(--color-light300);
 }
-p.nulstil {
+button.nulstil {
   font-weight: 600;
   text-decoration: underline;
+  text-transform: uppercase;
   text-align: end;
+  cursor: pointer;
 }
 .filter-btns {
   display: grid;
@@ -47,6 +49,10 @@ p.nulstil {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+a.opskrift {
+  display: grid;
+  gap: 0.5rem;
 }
 @media (min-width: 600px) {
   .opskrift-container {
