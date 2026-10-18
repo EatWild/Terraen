@@ -60,7 +60,7 @@ Sort: var(--color-black);
   position: absolute;
   width: 100%;
   object-fit: cover;
-  opacity: 8%;
+  opacity: 11%;
   inset: 0;
   pointer-events: none;
   z-index: 0;
@@ -301,5 +301,6 @@ Sort: var(--color-black);
   }
   .detail {
     opacity: 5%;
+    width: 120%;
   }
 }
