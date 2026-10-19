@@ -42,7 +42,67 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <section class="txt">
+        <p class="caps">Opskrifter</p>
+        <h1 class="mobil">Find maden til din tur</h1>
+        <p>Find retter ved hjælp af filtrene, der kan sortere efter retternes vægt, tid, eller efter hvilket tilberedningsudstyr du har med.</p>
+        <span class="line"></span>
+      </section>
+      <section class="filters">
+        <div class="filter-btns">
+          <p class="caps"><strong>Oppaknings vægt</strong></p>
+          <div class="flex-wrap oppakning">
+            <button data-oppakning="alle" class="active-btn">Alle</button>
+            <button data-oppakning="lett">Let</button>
+            <button data-oppakning="mellem">Mellem</button>
+            <button data-oppakning="tung">Tung</button>
+          </div>
+        </div>
+
+        <div class="filter-btns">
+          <p class="caps"><strong>Tid i alt</strong></p>
+          <div class="flex-wrap total-tid">
+            <button data-tid="alle" class="active-btn">Alle</button>
+            <button data-tid="0-20">0 - 20min</button>
+            <button data-tid="20-45">20 - 45min</button>
+            <button data-tid="over45">45min +</button>
+          </div>
+        </div>
+
+        <div class="filter-btns">
+          <p class="caps"><strong>Udstyr</strong></p>
+          <div class="flex-wrap udstyr">
+            <button data-udstyr="alle" class="active-btn">Alle</button>
+            <button data-udstyr="baal-rist">Bål &amp; rist</button>
+            <button data-udstyr="trangia">Trangia</button>
+            <button data-udstyr="gryde-baal">Gryde over bål</button>
+            <button data-udstyr="pande">Pande</button>
+            <button data-udstyr="spyd">Spyd</button>
+            <button data-udstyr="forberedt-hjemme">Forberedt hjemme</button>
+            <button data-udstyr="ingen-ild">Ingen ild</button>
+          </div>
+        </div>
+        <a href="productlist.html" class="nulstil">Nulstil alle filtre</a>
+
+        <span class="line"></span>
+      </section>
+      <section>
+        <div class="viser-opskrifter">
+          <p>
+            Viser
+            <span class="antal"></span>
+            af 50 opskrifter
+          </p>
+        </div>
+        <div class="opskrift-container">
+          <a href="singleview.html" class="opskrift">
+            <img src="imgs/logo-sort.webp" alt="" />
+            <h4 class="mobil">Opskrift navn</h4>
+          </a>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <nav class="footernav">

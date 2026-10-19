@@ -68,20 +68,32 @@ h1 {
   font-size: 64px;
   font-weight: 400;
 }
+h1.mobil {
+  font-size: 48px;
+}
 h2 {
   font-family: "Outfit";
   font-size: 40px;
   font-weight: 300;
+}
+h2.mobil {
+  font-size: 36px;
 }
 h3 {
   font-family: "Outfit";
   font-size: 32px;
   font-weight: 300;
 }
+h3.mobil {
+  font-size: 24px;
+}
 h4 {
   font-family: "Outfit";
   font-size: 24px;
   font-weight: 400;
+}
+h4.mobil {
+  font-size: 20px;
 }
 p {
   font-family: "DM Sans";
@@ -90,10 +102,12 @@ p {
 }
 p.caps {
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 p.caps_thin {
   text-transform: uppercase;
   font-weight: 200;
+  letter-spacing: 3px;
 }
 p.logo-txt {
   font-family: "Outfit";
@@ -258,7 +272,7 @@ header {
 /* Footer ***************************************************/
 footer {
   width: 100%;
-  justify-content: center;
+  justify-items: center;
   background-color: var(--color-green700);
   padding-block: 65px 85px;
   margin-top: 85px;
@@ -375,5 +389,6 @@ footer {
   .footernav {
     column-gap: 0;
     justify-content: space-between;
+    width: 100%;
   }
 }
