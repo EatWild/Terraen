@@ -95,7 +95,7 @@
   letter-spacing: 0.02em;
 }
 
-/* ---------- Opskrift (fremgangsmåde + pakkeliste) ---------- */
+/* ---------- Opskrift ---------- */
 
 .opskrift-detaljer {
   display: flex;
@@ -178,7 +178,7 @@
   letter-spacing: 0.02em;
 }
 
-/* Flueben (checkbox) */
+/* Flueben */
 .ingrediens-liste input {
   appearance: none;
   flex-shrink: 0;
@@ -229,7 +229,7 @@
   color: var(--color-light);
 }
 
-/* Billede med samarbejds-tag ovenpå */
+/* Billede */
 .udstyr-billede {
   position: relative;
 }
@@ -282,9 +282,8 @@
   text-align: center;
 }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* ---------- Tablet ---------- */
+
 @media (min-width: 768px) {
   .singleview {
     --side-margin: 48px;
@@ -305,9 +304,8 @@
   }
 }
 
-/* =========================================================
-   DESKTOP
-   ========================================================= */
+/* ---------- Desktop ---------- */
+
 @media (min-width: 1200px) {
   .singleview {
     --side-margin: 144px;
@@ -317,7 +315,6 @@
     padding-top: 80px;
   }
 
-  /* Hero: brødkrummer øverst, billede venstre, tekst højre */
   .opskrift-top {
     display: grid;
     grid-template-columns: 478px 1fr;
@@ -370,7 +367,6 @@
     letter-spacing: 0;
   }
 
-  /* Pakkeliste venstre, fremgangsmåde højre */
   .opskrift-detaljer {
     flex-direction: row;
     align-items: flex-start;
@@ -397,7 +393,6 @@
     letter-spacing: 0;
   }
 
-  /* Udstyr til turen: billede venstre, tekst højre */
   .udstyr {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -1,6 +1,6 @@
 "use strict";
 const params = new URLSearchParams(window.location.search);
-const selectedID = params.get("id") || 17; // viser ret 17, hvis der ikke er et id i adressen
+const selectedID = params.get("id") || 17;
 
 const detailURL = `https://dummyjson.com/recipes/${selectedID}`;
 const opskriftIndhold = document.querySelector(".opskriftIndhold");
@@ -67,7 +67,7 @@ function showDetails(detail) {
     </section>`;
 }
 
-// Oppakning ud fra antal ingredienser (samme regler som filteret)
+// Oppakning
 function oppakning(detail) {
   const antal = detail.ingredients.length;
   if (antal <= 7) return "Let";
@@ -75,7 +75,7 @@ function oppakning(detail) {
   return "Tung";
 }
 
-// Tid i alt ud fra forberedelse + tilberedning (samme regler som filteret)
+// Tid
 function tid(detail) {
   const min = detail.prepTimeMinutes + detail.cookTimeMinutes;
   if (min <= 20) return "Hurtig";

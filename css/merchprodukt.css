@@ -1,8 +1,3 @@
-/* =========================================================
-   PRODUKT (merch single view) – Mobile first
-   Produktkort og .lille-overskrift kommer fra merch.css
-   ========================================================= */
-
 /* ---------- Brødkrummer ---------- */
 
 .breadcrumbs { padding: 24px var(--side-margin) 16px; }
@@ -34,7 +29,7 @@
   padding: 0 var(--side-margin) 64px;
 }
 
-/* Galleri: stort billede + fire små */
+/* Galleri */
 .galleri {
   display: flex;
   flex-direction: column;
@@ -85,7 +80,7 @@
   line-height: 1.4;
 }
 
-/* Antal + knap */
+/* Antal */
 .koeb {
   display: flex;
   flex-direction: column;
@@ -180,7 +175,6 @@
   }
   .breadcrumbs li + li::before { margin-right: 12px; }
 
-  /* Galleri venstre, info højre */
   .produkt {
     flex-direction: row;
     align-items: flex-start;

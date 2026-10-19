@@ -1,11 +1,11 @@
 "use strict";
 const params = new URLSearchParams(window.location.search);
-const selectedID = params.get("id") || 3; // viser termoflasken, hvis der ikke er et id i adressen
+const selectedID = params.get("id") || 3;
 
 const produktIndhold = document.querySelector(".produktIndhold");
 const mereMerchListe = document.querySelector(".mereMerchListe");
 
-// De 6 produkter
+// Produkter
 const produkter = [
   {
     id: 3,
@@ -156,7 +156,7 @@ function showDetails(detail) {
   antal();
 }
 
-// Klik på et lille billede = det bliver det store billede
+// Skift billede
 function skiftBillede() {
   const hovedbillede = document.querySelector(".hovedbillede");
   const thumbs = document.querySelectorAll(".thumb");
@@ -170,7 +170,7 @@ function skiftBillede() {
   });
 }
 
-// Vælg antal
+// Antal
 function antal() {
   const tal = document.querySelector(".antal-tal");
   let antal = 1;
@@ -185,7 +185,7 @@ function antal() {
   });
 }
 
-// Mere merch: de tre næste produkter
+// Mere merch
 function showMere(produkter) {
   const index = produkter.findIndex((produkt) => produkt.id == selectedID);
   const andre = [...produkter.slice(index + 1), ...produkter.slice(0, index)].slice(0, 3);

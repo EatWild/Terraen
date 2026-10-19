@@ -116,7 +116,6 @@
   font-weight: 300;
 }
 
-/* Jeres .cta-btn bliver grøn ved hover – på den mørke baggrund bliver den lys i stedet */
 .samarbejde .cta-btn:hover {
   background-color: var(--color-light);
   color: var(--color-green900);
@@ -127,7 +126,7 @@
 @media (min-width: 1200px) {
   .merch {
     --side-margin: 144px;
-    padding-top: 80px; /* plads til header */
+    padding-top: 80px;
   }
 
   .merch-intro {
