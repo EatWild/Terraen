@@ -1,19 +1,13 @@
-/* =========================================================
-   MERCH – Mobile first
-   Bygger videre på custom.css (farver) og general.css
-   (reset, fonte og .cta-btn). De filer ændres ikke.
-   Produktkortene bruges også på produkt.html.
-   ========================================================= */
-
-/* Sidemargin – skifter på tablet og desktop længere nede */
+/* Sidemargin */
 .merch {
   --side-margin: 24px;
 }
 
 .merchListe,
-.breadcrumbs ol { list-style: none; }
+.breadcrumbs ol {
+  list-style: none;
+}
 
-/* Bruges sammen med jeres p.caps */
 .lille-overskrift {
   font-size: 13px;
   font-weight: 500;
@@ -76,17 +70,23 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
   margin-bottom: 4px;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
-.merch-kort a:hover .merch-kort-billede { opacity: .85; }
+.merch-kort a:hover .merch-kort-billede {
+  opacity: 0.85;
+}
 
 .merch-kort-navn {
   font-size: 18px;
   font-weight: 400;
 }
 .merch-kort-tekst,
-.merch-kort-pris { font-size: 14px; }
-.merch-kort-pris { font-weight: 500; }
+.merch-kort-pris {
+  font-size: 14px;
+}
+.merch-kort-pris {
+  font-weight: 500;
+}
 
 /* ---------- Samarbejde (Spejdersport) ---------- */
 
@@ -94,7 +94,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 80px; /* lyst mellemrum før footeren, som på opskriftsiden */
+  margin-bottom: 80px;
   padding: 80px var(--side-margin);
   background-color: var(--color-green700);
   color: var(--color-light);
@@ -105,12 +105,16 @@
   flex-direction: column;
   gap: 16px;
 }
-.samarbejde .lille-overskrift { color: var(--color-light); }
+.samarbejde .lille-overskrift {
+  color: var(--color-light);
+}
 .samarbejde-titel {
   font-size: 36px;
   color: var(--color-light);
 }
-.samarbejde-tekst p:not(.lille-overskrift) { font-weight: 300; }
+.samarbejde-tekst p:not(.lille-overskrift) {
+  font-weight: 300;
+}
 
 /* Jeres .cta-btn bliver grøn ved hover – på den mørke baggrund bliver den lys i stedet */
 .samarbejde .cta-btn:hover {
@@ -118,13 +122,20 @@
   color: var(--color-green900);
 }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-@media (min-width: 768px) {
-  .merch { --side-margin: 48px; }
+/* ---------- Desktop ---------- */
 
-  .merch-titel { font-size: 56px; }
+@media (min-width: 1200px) {
+  .merch {
+    --side-margin: 144px;
+    padding-top: 80px; /* plads til header */
+  }
+
+  .merch-intro {
+    padding-top: 60px;
+  }
+  .merch-titel {
+    font-size: 64px;
+  }
 
   .merch-intro-bund {
     flex-direction: row;
@@ -132,40 +143,34 @@
     align-items: flex-end;
   }
 
-  .merchListe {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px 24px;
-  }
-  .merch-kort-navn { font-size: 22px; }
-  .merch-kort-tekst,
-  .merch-kort-pris { font-size: 15px; }
-
-  .samarbejde {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .samarbejde-tekst { max-width: 560px; }
-}
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
-@media (min-width: 1200px) {
-  .merch { --side-margin: 144px; }
-
-  .merch { padding-top: 80px; } /* plads til header */
-
-  .merch-intro { padding-top: 60px; }
-  .merch-titel { font-size: 64px; }
-
   .merch-hero {
     aspect-ratio: auto;
     height: 560px;
   }
 
-  .merchListe { padding: 64px var(--side-margin) 120px; }
+  .merchListe {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 24px;
+    padding: 64px var(--side-margin) 120px;
+  }
+  .merch-kort-navn {
+    font-size: 22px;
+  }
+  .merch-kort-tekst,
+  .merch-kort-pris {
+    font-size: 15px;
+  }
 
-  .samarbejde { margin-bottom: 198px; }
-  .samarbejde-titel { font-size: 48px; }
+  .samarbejde {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 198px;
+  }
+  .samarbejde-tekst {
+    max-width: 560px;
+  }
+  .samarbejde-titel {
+    font-size: 48px;
+  }
 }

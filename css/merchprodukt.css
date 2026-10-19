@@ -169,22 +169,8 @@
 }
 .mereMerchListe { padding-top: 24px; }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-@media (min-width: 768px) {
-  .produkt-titel { font-size: 56px; }
+/* ---------- Desktop ---------- */
 
-  .mere-merch-top {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-}
-
-/* =========================================================
-   DESKTOP
-   ========================================================= */
 @media (min-width: 1200px) {
   .breadcrumbs { padding: 60px var(--side-margin) 20px; }
   .breadcrumbs ol {
@@ -211,5 +197,10 @@
   .produkt-titel { font-size: 64px; }
   .produkt-pris { font-size: 40px; }
 
+  .mere-merch-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
   .mere-merch-titel { font-size: 55px; }
 }

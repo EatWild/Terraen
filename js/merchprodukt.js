@@ -5,7 +5,7 @@ const selectedID = params.get("id") || 3; // viser termoflasken, hvis der ikke e
 const produktIndhold = document.querySelector(".produktIndhold");
 const mereMerchListe = document.querySelector(".mereMerchListe");
 
-// De 6 produkter – billederne hedder fx termoflaske-1.webp til termoflaske-4.webp i imgs/merch
+// De 6 produkter
 const produkter = [
   {
     id: 3,
@@ -19,7 +19,7 @@ const produkter = [
     farve: "Natsø",
     materialer: "Dobbeltvægget rustfrit stål, pulverlakeret. Låg i bambus og silikone.",
     maal: "Højde 28 cm. Diameter 8 cm. Vægt 420 g.",
-    pleje: "Vask i hånden. Må ikke komme i opvaskemaskine eller fryser."
+    pleje: "Vask i hånden. Må ikke komme i opvaskemaskine eller fryser.",
   },
   {
     id: 6,
@@ -33,7 +33,7 @@ const produkter = [
     farve: "Skovgrøn",
     materialer: "100 % merinould.",
     maal: "One size.",
-    pleje: "Uldvask ved 30 grader. Tørres liggende."
+    pleje: "Uldvask ved 30 grader. Tørres liggende.",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const produkter = [
     farve: "Klitsand",
     materialer: "100 % økologisk bomuld. Spænde i messing.",
     maal: "One size. Justerbar bagpå.",
-    pleje: "Vask i hånden ved 30 grader. Lufttørres."
+    pleje: "Vask i hånden ved 30 grader. Lufttørres.",
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const produkter = [
     farve: "Natskov",
     materialer: "Ripstop nylon af genbrugsmateriale. Vandafvisende overflade.",
     maal: "24 liter. 50 × 30 × 18 cm. Vægt 780 g.",
-    pleje: "Børst snavs af, og vask i hånden med mild sæbe. Lufttørres."
+    pleje: "Børst snavs af, og vask i hånden med mild sæbe. Lufttørres.",
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ const produkter = [
     farve: "Fire landskaber",
     materialer: "Glas med metallåg. Æske i genbrugspap.",
     maal: "4 dåser á 40 g. Æsken måler 20 × 14 × 6 cm.",
-    pleje: "Opbevares tørt og mørkt. Holdbar i 12 måneder."
+    pleje: "Opbevares tørt og mørkt. Holdbar i 12 måneder.",
   },
   {
     id: 1,
@@ -89,8 +89,8 @@ const produkter = [
     farve: "Fire landskaber",
     materialer: "Vandfast stenpapir, der kan tåle regn, fedtfingre og en tur i rygsækken.",
     maal: "Foldet: 10 × 15 cm. Udfoldet: 60 × 15 cm.",
-    pleje: "Tør af med en fugtig klud. Må ikke ligge i direkte sol i længere tid."
-  }
+    pleje: "Tør af med en fugtig klud. Må ikke ligge i direkte sol i længere tid.",
+  },
 ];
 
 function showDetails(detail) {
@@ -170,7 +170,7 @@ function skiftBillede() {
   });
 }
 
-// Minus og plus ved antal (mindst 1)
+// Vælg antal
 function antal() {
   const tal = document.querySelector(".antal-tal");
   let antal = 1;
@@ -185,7 +185,7 @@ function antal() {
   });
 }
 
-// Mere merch: de tre næste produkter (ikke det, man står på)
+// Mere merch: de tre næste produkter
 function showMere(produkter) {
   const index = produkter.findIndex((produkt) => produkt.id == selectedID);
   const andre = [...produkter.slice(index + 1), ...produkter.slice(0, index)].slice(0, 3);
@@ -200,7 +200,7 @@ function showMere(produkter) {
           <p class="merch-kort-tekst">${produkt.kortTekst}</p>
           <p class="merch-kort-pris">${produkt.pris} kr${produkt.enhed}</p>
         </a>
-      </li>`
+      </li>`,
     )
     .join("");
 }
