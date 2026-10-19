@@ -12,3 +12,295 @@ Just in case;
 Hvid: var(--color-white);
 Sort: var(--color-black);
 */
+/* -------------------------------------------------------------- */
+
+/* Generelt (mobile) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  place-items: center;
+  color: var(--color-light);
+  width: 90%;
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.our_idea {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-green700);
+  color: var(--color-light);
+  text-align: center;
+  padding: 30px 70px;
+  place-items: center;
+  h3 {
+    z-index: 3;
+  }
+  p {
+    z-index: 3;
+  }
+}
+.detail {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  opacity: 11%;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+/* .arrow {
+  border: solid var(--color-green900);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+} */
+.q_icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding-top: 3rem;
+  padding-bottom: 3.4rem;
+  /* align-items: center; */
+  img {
+    width: 60%;
+    margin-inline: auto;
+    margin-bottom: 7px;
+  }
+}
+.qa {
+  margin-bottom: 10px;
+}
+
+.ide {
+  font-size: 24px;
+}
+.citat {
+  position: relative;
+  height: 600px;
+}
+.citat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.citat h2,
+.citat p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  color: var(--color-light);
+  text-align: center;
+  z-index: 1;
+}
+.citat h2 {
+  bottom: 230px;
+}
+.citat p {
+  bottom: 180px;
+}
+.hover_text {
+  margin-top: 160px;
+  padding-block: 10px;
+  padding-left: 8px;
+  background-color: rgba(128, 128, 128, 0.75);
+  color: var(--color-light);
+}
+/* Galleri banner */
+.gallery_section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.gallery_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.gallery_track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /*tilføjer en relativt simpel horisontal scrollbar til hvis man har en række af ting man vil bladre igennem*/
+  scroll-behavior: smooth; /*gør så det ikke bare hopper fra billede til billede*/
+  scroll-snap-type: x mandatory; /*x - effekten sidder på x-aksen. mandatory - bevæger sig automatisk til et "snap point" efter scroll er færdig udført*/
+  scrollbar-width: none; /*gemmer scrollbaren, men funktionen er stadig brugbar*/
+  width: 100%;
+  padding: 10px 4px 20px;
+}
+.gallery_track::-webkit-scrollbar {
+  display: none;
+}
+.gallery_card {
+  flex: 0 0 calc((100% - 40px) / 3); /*bruges til at bestemme om et flex'et item kan vokse eller mindskes i en flex container - brugbart til karuseller der viser flere billeder på én gang*/
+  min-width: 0;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.gallery_card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery_image_wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.gallery_overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 1.2rem;
+  color: var(--color-green900);
+  z-index: 1;
+  inset: 0;
+}
+.gallery_overlay.forest {
+  color: var(--color-light);
+}
+/* .light {
+  color: var(--color-light);
+} */
+.gallery_arrow {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-green700);
+  color: var(--color-light);
+  font-size: 20px;
+  cursor: pointer;
+}
+.gallery_arrow:hover {
+  background-color: var(--color-green900);
+}
+.gallery_arrow.prev {
+  left: -16px;
+}
+.gallery_arrow.next {
+  right: -16px;
+}
+.gallery_arrow:focus-visible {
+  outline: 3px solid var(--color-green700);
+  outline-offset: 3px;
+}
+.gallery_dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.gallery_dots .dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  opacity: 0.8;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-green400);
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+.gallery_dots .dot.active {
+  background: var(--color-green700);
+  transform: scale(1.1);
+  opacity: 1;
+  height: 11px;
+  width: 11px;
+}
+.gallery_dots .dot:hover {
+  background: var(--color-green900);
+}
+
+@media (max-width: 800px) {
+  .gallery_card {
+    flex: 0 0 100%;
+  }
+  .gallery_arrow {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 800px) {
+  .citat h2,
+  .citat p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-light);
+    text-align: center;
+    z-index: 1;
+  }
+  .citat h2 {
+    bottom: 250px;
+  }
+  .citat p {
+    bottom: 200px;
+  }
+  .hover_text {
+    visibility: hidden;
+  }
+  .gallery_card:hover img {
+    transform: scale(1.02);
+    filter: blur(1px) grayscale(50%) brightness(50%);
+  }
+  .gallery_card:hover {
+    .hover_text {
+      visibility: visible;
+      margin-top: 30px;
+      padding-left: 0%;
+      background-color: rgba(128, 128, 128, 0);
+    }
+    .hover {
+      color: var(--color-light);
+    }
+  }
+  .q_icons {
+    gap: 80px;
+    img {
+      width: 40%;
+      margin-bottom: 11px;
+    }
+  }
+  .detail {
+    opacity: 5%;
+    width: 120%;
+  }
+}
