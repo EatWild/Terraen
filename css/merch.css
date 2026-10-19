@@ -1,0 +1,169 @@
+/* =========================================================
+   MERCH – Mobile first
+   Bygger videre på custom.css (farver) og general.css
+   (reset, fonte og .cta-btn). De filer ændres ikke.
+   Produktkortene bruges også på produkt.html.
+   ========================================================= */
+
+/* Sidemargin – skifter på tablet og desktop længere nede */
+.merch {
+  --side-margin: 24px;
+}
+
+.merchListe,
+.breadcrumbs ol { list-style: none; }
+
+/* Bruges sammen med jeres p.caps */
+.lille-overskrift {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-green700);
+}
+
+/* ---------- Intro ---------- */
+
+.merch-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px var(--side-margin) 24px;
+}
+
+.merch-titel {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.merch-intro-bund {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-green900);
+}
+.merch-intro-bund p:not(.lille-overskrift) {
+  font-weight: 300;
+  max-width: 420px;
+}
+
+/* ---------- Stort billede ---------- */
+
+.merch-hero {
+  padding: 0 var(--side-margin);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* ---------- Produktkort ---------- */
+
+.merchListe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 12px;
+  padding: 48px var(--side-margin) 80px;
+}
+
+.merch-kort a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.merch-kort-billede {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 4px;
+  transition: opacity .2s;
+}
+.merch-kort a:hover .merch-kort-billede { opacity: .85; }
+
+.merch-kort-navn {
+  font-size: 18px;
+  font-weight: 400;
+}
+.merch-kort-tekst,
+.merch-kort-pris { font-size: 14px; }
+.merch-kort-pris { font-weight: 500; }
+
+/* ---------- Samarbejde (Spejdersport) ---------- */
+
+.samarbejde {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 80px var(--side-margin);
+  background-color: var(--color-green700);
+  color: var(--color-light);
+}
+
+.samarbejde-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.samarbejde .lille-overskrift { color: var(--color-light); }
+.samarbejde-titel {
+  font-size: 36px;
+  color: var(--color-light);
+}
+.samarbejde-tekst p:not(.lille-overskrift) { font-weight: 300; }
+
+/* Jeres .cta-btn bliver grøn ved hover – på den mørke baggrund bliver den lys i stedet */
+.samarbejde .cta-btn:hover {
+  background-color: var(--color-light);
+  color: var(--color-green900);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (min-width: 768px) {
+  .merch { --side-margin: 48px; }
+
+  .merch-titel { font-size: 56px; }
+
+  .merch-intro-bund {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .merchListe {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 24px;
+  }
+  .merch-kort-navn { font-size: 22px; }
+  .merch-kort-tekst,
+  .merch-kort-pris { font-size: 15px; }
+
+  .samarbejde {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .samarbejde-tekst { max-width: 560px; }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+@media (min-width: 1200px) {
+  .merch { --side-margin: 144px; }
+
+  .merch { padding-top: 80px; } /* plads til header */
+
+  .merch-intro { padding-top: 60px; }
+  .merch-titel { font-size: 64px; }
+
+  .merch-hero {
+    aspect-ratio: auto;
+    height: 560px;
+  }
+
+  .merchListe { padding: 64px var(--side-margin) 120px; }
+
+  .samarbejde-titel { font-size: 48px; }
+}

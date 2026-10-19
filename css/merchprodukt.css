@@ -1,0 +1,223 @@
+/* =========================================================
+   PRODUKT (merch single view) – Mobile first
+   Produktkort, tags og .lille-overskrift kommer fra merch.css
+   ========================================================= */
+
+/* ---------- Brødkrummer ---------- */
+
+.breadcrumbs { padding: 24px var(--side-margin) 16px; }
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  font-family: "DM Sans";
+  font-weight: 300;
+  font-size: 14px;
+}
+.breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 10px;
+}
+.breadcrumbs a { color: inherit; }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumb-navn {
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+/* ---------- Produkt ---------- */
+
+.produkt {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 var(--side-margin) 64px;
+}
+
+/* Galleri: stort billede + fire små */
+.galleri {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hovedbillede {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.thumb {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.thumb img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.thumb.aktiv,
+.thumb:hover { border-color: var(--color-green700); }
+
+/* Info */
+.produkt-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+}
+.landskab-tag.fyldt {
+  background-color: var(--color-green700);
+  color: var(--color-light);
+}
+
+.produkt-titel {
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.produkt-pris {
+  font-family: "Outfit";
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.produkt-beskrivelse {
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+/* Antal + knap */
+.koeb {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding-top: 8px;
+}
+.koeb-raekke {
+  display: flex;
+  gap: 12px;
+}
+.antal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 48px;
+  padding: 0 16px;
+  border: 1px solid var(--color-green900);
+  border-radius: 100px;
+  font-family: "DM Sans";
+}
+.antal button {
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.koeb-knap {
+  flex: 1;
+  border: 0;
+  cursor: pointer;
+  font-family: "DM Sans";
+}
+.fragt {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Materialer, Mål, Pleje */
+.fold-ud {
+  width: 100%;
+  border-top: 1px solid var(--color-green900);
+}
+.fold-ud details { border-bottom: 1px solid var(--color-green900); }
+.fold-ud summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-family: "Outfit";
+  font-size: 20px;
+  cursor: pointer;
+  list-style: none;
+}
+.fold-ud summary::-webkit-details-marker { display: none; }
+.fold-ud summary::after {
+  content: "+";
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+}
+.fold-ud details[open] summary::after { content: "−"; }
+.fold-ud details p {
+  padding-bottom: 16px;
+  font-weight: 300;
+}
+
+/* ---------- Mere merch ---------- */
+
+.mere-merch-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 var(--side-margin);
+}
+.mere-merch-titel { font-size: 36px; }
+.se-al-merch {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.mereMerchListe { padding-top: 24px; }
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (min-width: 768px) {
+  .produkt-titel { font-size: 56px; }
+
+  .mere-merch-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+@media (min-width: 1200px) {
+  .breadcrumbs { padding: 60px var(--side-margin) 20px; }
+  .breadcrumbs ol {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    gap: 12px;
+  }
+  .breadcrumbs li + li::before { margin-right: 12px; }
+
+  /* Galleri venstre, info højre */
+  .produkt {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 64px;
+    padding-bottom: 120px;
+  }
+  .galleri {
+    flex: 0 0 600px;
+    gap: 12px;
+  }
+  .thumbs { gap: 12px; }
+  .produkt-info { flex: 1; }
+
+  .produkt-titel { font-size: 64px; }
+  .produkt-pris { font-size: 40px; }
+
+  .mere-merch-titel { font-size: 55px; }
+}
