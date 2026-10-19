@@ -1,111 +1,116 @@
 <!doctype html>
 <html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/productlist.css" />
-    <meta name="robots" content="noindex, nofollow" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <script src="js/generel.js" defer></script>
-    <script src="js/productlist.js" defer></script>
-    <title>Opskrifter</title>
-  </head>
 
-  <body>
-    <header>
-      <nav class="headernav">
-        <a href="/" class="logo">
-          <img src="imgs/logo-sort.webp" alt="Logo for Terræn, en bølget spiral inspireret af et topografisk kort." />
-          <p class="logo-txt">Terræn</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/productlist.css" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <script src="js/generel.js" defer></script>
+  <script src="js/productlist.js" defer></script>
+  <title>Opskrifter</title>
+</head>
+
+<body>
+  <header>
+    <nav class="headernav">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo-sort.webp" alt="Logo for Terræn, en bølget spiral inspireret af et topografisk kort." />
+        <p class="logo-txt">Terræn</p>
+      </a>
+      <button class="menuikon" aria-label="Åben mobil menu">
+        <span class="toplinje"></span>
+        <span class="midterlinje"></span>
+        <span class="bundlinje"></span>
+      </button>
+      <ul class="headermenu">
+        <li><span class="line"></span></li>
+        <li><a id="visiting" class="navlink" href="productlist.html">Opskrifter</a></li>
+        <li><span class="line"></span></li>
+        <li><a class="navlink" href="merch.html">Merch</a></li>
+        <li><span class="line"></span></li>
+        <li><a class="navlink p-btm" href="https://www.spejdersport.dk/" target="_blank">Spejdersport &#129125;</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="txt">
+      <p class="caps">Opskrifter</p>
+      <h1 class="mobil">Find maden til din tur</h1>
+      <p>Find retter ved hjælp af filtrene, der kan sortere efter retternes vægt, tid, eller efter hvilket
+        tilberedningsudstyr du har med.</p>
+      <span class="line"></span>
+    </section>
+    <section class="filters">
+      <div class="filter-btns">
+        <p class="caps"><strong>Oppaknings vægt</strong></p>
+        <div class="flex-wrap oppakning">
+          <button data-oppakning="alle" class="active-btn">Alle</button>
+          <button data-oppakning="lett">Let</button>
+          <button data-oppakning="mellem">Mellem</button>
+          <button data-oppakning="tung">Tung</button>
+        </div>
+      </div>
+
+      <div class="filter-btns">
+        <p class="caps"><strong>Tid i alt</strong></p>
+        <div class="flex-wrap total-tid">
+          <button data-tid="alle" class="active-btn">Alle</button>
+          <button data-tid="0-20">0 - 20min</button>
+          <button data-tid="20-45">20 - 45min</button>
+          <button data-tid="over45">45min +</button>
+        </div>
+      </div>
+
+      <div class="filter-btns">
+        <p class="caps"><strong>Udstyr</strong></p>
+        <div class="flex-wrap udstyr">
+          <button data-udstyr="alle" class="active-btn">Alle</button>
+          <button data-udstyr="baal-rist">Bål &amp; rist</button>
+          <button data-udstyr="trangia">Trangia</button>
+          <button data-udstyr="gryde-baal">Gryde over bål</button>
+          <button data-udstyr="pande">Pande</button>
+          <button data-udstyr="spyd">Spyd</button>
+          <button data-udstyr="forberedt-hjemme">Forberedt hjemme</button>
+          <button data-udstyr="ingen-ild">Ingen ild</button>
+        </div>
+      </div>
+      <a href="productlist.html" class="nulstil">Nulstil alle filtre</a>
+
+      <span class="line"></span>
+    </section>
+    <section>
+      <div class="viser-opskrifter">
+        <p>
+          Viser
+          <span class="antal"></span>
+          af 50 opskrifter
+        </p>
+      </div>
+      <div class="opskrift-container">
+        <a href="singleview.html" class="opskrift">
+          <img src="imgs/logo-sort.webp" alt="" />
+          <h4 class="mobil">Opskrift navn</h4>
         </a>
-        <button class="menuikon" aria-label="Åben mobil menu">
-          <span class="toplinje"></span>
-          <span class="midterlinje"></span>
-          <span class="bundlinje"></span>
-        </button>
-        <ul class="headermenu">
-          <li><span class="line"></span></li>
-          <li><a id="visiting" class="navlink" href="productlist.html">Opskrifter</a></li>
-          <li><span class="line"></span></li>
-          <li><a class="navlink" href="merch.html">Merch</a></li>
-          <li><span class="line"></span></li>
-          <li><a class="navlink p-btm" href="https://www.spejdersport.dk/" target="_blank">Spejdersport &#129125;</a></li>
-        </ul>
-      </nav>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main>
-      <section class="txt">
-        <p class="caps">Opskrifter</p>
-        <h1 class="mobil">Find maden til din tur</h1>
-        <p>Find retter ved hjælp af filtrene, der kan sortere efter retternes vægt, tid, eller efter hvilket tilberedningsudstyr du har med.</p>
-        <span class="line"></span>
-      </section>
-      <section class="filters">
-        <div class="filter-btns">
-          <p class="caps"><strong>Oppaknings vægt</strong></p>
-          <div class="flex-wrap oppakning">
-            <button data-oppakning="alle" class="active-btn">Alle</button>
-            <button data-oppakning="lett">Let</button>
-            <button data-oppakning="mellem">Mellem</button>
-            <button data-oppakning="tung">Tung</button>
-          </div>
-        </div>
-
-        <div class="filter-btns">
-          <p class="caps"><strong>Tid i alt</strong></p>
-          <div class="flex-wrap total-tid">
-            <button data-tid="alle" class="active-btn">Alle</button>
-            <button data-tid="0-20">0 - 20min</button>
-            <button data-tid="20-45">20 - 45min</button>
-            <button data-tid="over45">45min +</button>
-          </div>
-        </div>
-
-        <div class="filter-btns">
-          <p class="caps"><strong>Udstyr</strong></p>
-          <div class="flex-wrap udstyr">
-            <button data-udstyr="alle" class="active-btn">Alle</button>
-            <button data-udstyr="baal-rist">Bål &amp; rist</button>
-            <button data-udstyr="trangia">Trangia</button>
-            <button data-udstyr="gryde-baal">Gryde over bål</button>
-            <button data-udstyr="pande">Pande</button>
-            <button data-udstyr="spyd">Spyd</button>
-            <button data-udstyr="forberedt-hjemme">Forberedt hjemme</button>
-            <button data-udstyr="ingen-ild">Ingen ild</button>
-          </div>
-        </div>
-        <a href="productlist.html" class="nulstil">Nulstil alle filtre</a>
-
-        <span class="line"></span>
-      </section>
-      <section>
-        <div class="viser-opskrifter">
-          <p>
-            Viser
-            <span class="antal"></span>
-            af 50 opskrifter
-          </p>
-        </div>
-        <div class="opskrift-container">
-          <a href="singleview.html" class="opskrift">
-            <img src="imgs/logo-sort.webp" alt="" />
-            <h4 class="mobil">Opskrift navn</h4>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <nav class="footernav">
+  <footer>
+    <nav class="footernav">
+      <a class="logo-link" href="index.html">
         <div class="logo">
           <img src="imgs/logo-hvid.webp" alt="Logo for Terræn, en bølget spiral inspireret af et topografisk kort." />
           <div class="logo-txt-box">
@@ -114,16 +119,20 @@
           </div>
           <p class="samarbejde">Et samarbejde med Spejdersport</p>
         </div>
-        <ul class="footermenu">
-          <li><a class="navlink" href="productlist.html">Opskrifter</a></li>
-          <li><a class="navlink" href="merch.html">Merch</a></li>
-          <li><a class="navlink" id="orange" href="https://www.spejdersport.dk/" target="_blank">Spejdersport &#129125;</a></li>
-        </ul>
-        <div class="nyhedsbrev">
-          <p class="caps">Ugens ret på mail</p>
-          <div class="tilmeld"><input type="email" placeholder="din@mail.dk" /><a class="cta-btn" href="#">Tilmeld</a></div>
+      </a>
+      <ul class="footermenu">
+        <li><a class="navlink" href="productlist.html">Opskrifter</a></li>
+        <li><a class="navlink" href="merch.html">Merch</a></li>
+        <li><a class="navlink" id="orange" href="https://www.spejdersport.dk/" target="_blank">Spejdersport
+            &#129125;</a></li>
+      </ul>
+      <div class="nyhedsbrev">
+        <p class="caps">Ugens ret på mail</p>
+        <div class="tilmeld"><input type="email" placeholder="din@mail.dk" /><a class="cta-btn" href="#">Tilmeld</a>
         </div>
-      </nav>
-    </footer>
-  </body>
+      </div>
+    </nav>
+  </footer>
+</body>
+
 </html>

@@ -313,6 +313,9 @@ footer {
     }
   }
 }
+a.logo-link {
+  color: var(--color-light);
+}
 .logo-txt-box {
   display: grid;
   p.logo-txt {
