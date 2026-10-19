@@ -34,7 +34,7 @@ Sort: var(--color-black);
   transform: translate(-50%, -50%);
   text-align: center;
   place-items: center;
-  color: var(--color-light);
+  color: var(--color-green900);
   width: 90%;
   h2 {
     margin-bottom: 3rem;
@@ -278,6 +278,28 @@ footer {
 
 /* Desktop */
 @media (min-width: 800px) {
+  .hero {
+    height: 100%;
+  }
+  h1 {
+    letter-spacing: 3px;
+    font-size: 80px;
+  }
+  .food_ide {
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 3px;
+  }
+  .first_idea h3 {
+    padding-bottom: 10px;
+  }
+  .logo_text {
+    margin-left: 100px;
+  }
+  .logo_text img {
+    padding-top: 10px;
+  }
+
   .citat h2,
   .citat p {
     position: absolute;
@@ -295,6 +317,13 @@ footer {
   }
   .hover_text {
     visibility: hidden;
+  }
+  .gallery_section {
+    padding: 120px 25px;
+    p {
+      margin-bottom: 20px;
+      width: 55ch;
+    }
   }
   .gallery_card:hover img {
     transform: scale(1.02);

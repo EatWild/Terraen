@@ -281,6 +281,9 @@
   width: 100%;
   text-align: center;
 }
+footer {
+  margin: 0;
+}
 
 /* ---------- Desktop ---------- */
 
