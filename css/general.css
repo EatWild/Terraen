@@ -165,7 +165,7 @@ button {
   text-decoration: underline;
 }
 header {
-  position: sticky;
+  position: absolute;
   max-width: 1200px;
   width: 100%;
   justify-self: center;
