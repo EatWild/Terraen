@@ -158,6 +158,7 @@ Sort: var(--color-black);
   scroll-snap-align: start;
   overflow: hidden;
   border-radius: 12px;
+  cursor: pointer;
 }
 .gallery_card img {
   display: block;
