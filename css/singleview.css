@@ -282,36 +282,11 @@
   text-align: center;
 }
 
-/* ---------- Tablet ---------- */
-
-@media (min-width: 768px) {
-  .singleview {
-    --side-margin: 48px;
-  }
-
-  .opskrift-titel {
-    font-size: 56px;
-  }
-
-  .info-liste {
-    flex-direction: row;
-    gap: 64px;
-  }
-
-  .udstyr-knap {
-    align-self: flex-start;
-    width: fit-content;
-  }
-}
-
 /* ---------- Desktop ---------- */
 
 @media (min-width: 1200px) {
   .singleview {
     --side-margin: 144px;
-  }
-
-  .singleview {
     padding-top: 80px;
   }
 
@@ -358,6 +333,8 @@
     color: var(--color-black);
   }
   .info-liste {
+    flex-direction: row;
+    gap: 64px;
     padding: 0;
   }
   .info-liste dd {
@@ -402,6 +379,10 @@
   }
   .udstyr-titel {
     font-size: 48px;
+  }
+  .udstyr-knap {
+    align-self: flex-start;
+    width: fit-content;
   }
   .udstyr-tekst p:not(.lille-overskrift) {
     max-width: 480px;
