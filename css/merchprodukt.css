@@ -1,6 +1,6 @@
 /* =========================================================
    PRODUKT (merch single view) – Mobile first
-   Produktkort, tags og .lille-overskrift kommer fra merch.css
+   Produktkort og .lille-overskrift kommer fra merch.css
    ========================================================= */
 
 /* ---------- Brødkrummer ---------- */
@@ -68,14 +68,6 @@
   gap: 16px;
 }
 
-.tags {
-  display: flex;
-  gap: 8px;
-}
-.landskab-tag.fyldt {
-  background-color: var(--color-green700);
-  color: var(--color-light);
-}
 
 .produkt-titel {
   font-size: 48px;

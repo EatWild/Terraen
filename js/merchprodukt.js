@@ -8,34 +8,6 @@ const mereMerchListe = document.querySelector(".mereMerchListe");
 // De 6 produkter – billederne hedder fx termoflaske-1.webp til termoflaske-4.webp i imgs/merch
 const produkter = [
   {
-    id: 1,
-    navn: "Opskriftskort",
-    billede: "opskriftskort",
-    kortTekst: "Vandfast papir · 4 landskaber",
-    pris: 149,
-    enhed: " / stk.",
-    sted: "Stranden · Skoven · Søen · Bjerget",
-    beskrivelse: "Fire foldekort, et til hvert landskab. Hvert kort har seks opskrifter, der kan laves over bål eller trangia, og koordinatet til stedet på forsiden.",
-    farve: "Fire landskaber",
-    materialer: "Vandfast stenpapir, der kan tåle regn, fedtfingre og en tur i rygsækken.",
-    maal: "Foldet: 10 × 15 cm. Udfoldet: 60 × 15 cm.",
-    pleje: "Tør af med en fugtig klud. Må ikke ligge i direkte sol i længere tid."
-  },
-  {
-    id: 2,
-    navn: "Krydderisæt",
-    billede: "krydderisaet",
-    kortTekst: "4 × 40 g · én dåse pr. landskab",
-    pris: 199,
-    enhed: "",
-    sted: "4 landskaber · 4 blandinger",
-    beskrivelse: "Fire krydderiblandinger, der passer til opskrifterne. Citron og dild til stranden, svampe og timian til skoven, citronsalt og fennikel til søen og chili og spidskommen til bjerget.",
-    farve: "Fire landskaber",
-    materialer: "Glas med metallåg. Æske i genbrugspap.",
-    maal: "4 dåser á 40 g. Æsken måler 20 × 14 × 6 cm.",
-    pleje: "Opbevares tørt og mørkt. Holdbar i 12 måneder."
-  },
-  {
     id: 3,
     navn: "Termoflaske",
     billede: "termoflaske",
@@ -50,18 +22,18 @@ const produkter = [
     pleje: "Vask i hånden. Må ikke komme i opvaskemaskine eller fryser."
   },
   {
-    id: 4,
-    navn: "Vandretaske",
-    billede: "vandretaske",
-    kortTekst: "24 l · Natskov · Himmelbjerget",
-    pris: 899,
+    id: 6,
+    navn: "Hue",
+    billede: "hue",
+    kortTekst: "Merinould · glødmærkat · Rold Skov",
+    pris: 229,
     enhed: "",
-    sted: "Himmelbjerget · 56°06′N 9°41′E",
-    beskrivelse: "En 24 liters dagstaske med plads til madpakke, trangia og en ekstra trøje. Højdekurverne fra kortet er trykt på forsiden.",
-    farve: "Natskov",
-    materialer: "Ripstop nylon af genbrugsmateriale. Vandafvisende overflade.",
-    maal: "24 liter. 50 × 30 × 18 cm. Vægt 780 g.",
-    pleje: "Børst snavs af, og vask i hånden med mild sæbe. Lufttørres."
+    sted: "Rold Skov · 56°48′N 9°51′E",
+    beskrivelse: "En ribstrikket hue i skovgrøn merinould. Logoet sidder på opslaget og koordinatet til Rold Skov på siden.",
+    farve: "Skovgrøn",
+    materialer: "100 % merinould.",
+    maal: "One size.",
+    pleje: "Uldvask ved 30 grader. Tørres liggende."
   },
   {
     id: 5,
@@ -78,18 +50,46 @@ const produkter = [
     pleje: "Vask i hånden ved 30 grader. Lufttørres."
   },
   {
-    id: 6,
-    navn: "Hue",
-    billede: "hue",
-    kortTekst: "Merinould · glødmærkat · Rold Skov",
-    pris: 229,
+    id: 4,
+    navn: "Vandretaske",
+    billede: "vandretaske",
+    kortTekst: "24 l · Natskov · Himmelbjerget",
+    pris: 899,
     enhed: "",
-    sted: "Rold Skov · 56°48′N 9°51′E",
-    beskrivelse: "En ribstrikket hue i skovgrøn merinould. Logoet sidder på opslaget og koordinatet til Rold Skov på siden.",
-    farve: "Skovgrøn",
-    materialer: "100 % merinould.",
-    maal: "One size.",
-    pleje: "Uldvask ved 30 grader. Tørres liggende."
+    sted: "Himmelbjerget · 56°06′N 9°41′E",
+    beskrivelse: "En 24 liters dagstaske med plads til madpakke, trangia og en ekstra trøje. Højdekurverne fra kortet er trykt på forsiden.",
+    farve: "Natskov",
+    materialer: "Ripstop nylon af genbrugsmateriale. Vandafvisende overflade.",
+    maal: "24 liter. 50 × 30 × 18 cm. Vægt 780 g.",
+    pleje: "Børst snavs af, og vask i hånden med mild sæbe. Lufttørres."
+  },
+  {
+    id: 2,
+    navn: "Krydderisæt",
+    billede: "krydderisaet",
+    kortTekst: "4 × 40 g · én dåse pr. landskab",
+    pris: 199,
+    enhed: "",
+    sted: "4 landskaber · 4 blandinger",
+    beskrivelse: "Fire krydderiblandinger, der passer til opskrifterne. Citron og dild til stranden, svampe og timian til skoven, citronsalt og fennikel til søen og chili og spidskommen til bjerget.",
+    farve: "Fire landskaber",
+    materialer: "Glas med metallåg. Æske i genbrugspap.",
+    maal: "4 dåser á 40 g. Æsken måler 20 × 14 × 6 cm.",
+    pleje: "Opbevares tørt og mørkt. Holdbar i 12 måneder."
+  },
+  {
+    id: 1,
+    navn: "Opskriftskort",
+    billede: "opskriftskort",
+    kortTekst: "Vandfast papir · 4 landskaber",
+    pris: 149,
+    enhed: " / stk.",
+    sted: "Stranden · Skoven · Søen · Bjerget",
+    beskrivelse: "Fire foldekort, et til hvert landskab. Hvert kort har seks opskrifter, der kan laves over bål eller trangia, og koordinatet til stedet på forsiden.",
+    farve: "Fire landskaber",
+    materialer: "Vandfast stenpapir, der kan tåle regn, fedtfingre og en tur i rygsækken.",
+    maal: "Foldet: 10 × 15 cm. Udfoldet: 60 × 15 cm.",
+    pleje: "Tør af med en fugtig klud. Må ikke ligge i direkte sol i længere tid."
   }
 ];
 
