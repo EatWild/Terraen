@@ -88,9 +88,9 @@
   font-weight: 500;
 }
 
-/* ---------- Samarbejde (Spejdersport) ---------- */
+/* ---------- Spejdersport ---------- */
 
-.samarbejde {
+.spejdersport {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -100,23 +100,23 @@
   color: var(--color-light);
 }
 
-.samarbejde-tekst {
+.spejdersport-tekst {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.samarbejde .lille-overskrift {
+.spejdersport .lille-overskrift {
   color: var(--color-light);
 }
-.samarbejde-titel {
+.spejdersport-titel {
   font-size: 36px;
   color: var(--color-light);
 }
-.samarbejde-tekst p:not(.lille-overskrift) {
+.spejdersport-tekst p:not(.lille-overskrift) {
   font-weight: 300;
 }
 
-.samarbejde .cta-btn:hover {
+.spejdersport .cta-btn:hover {
   background-color: var(--color-light);
   color: var(--color-green900);
 }
@@ -126,7 +126,6 @@
 @media (min-width: 1200px) {
   .merch {
     --side-margin: 144px;
-    padding-top: 80px;
   }
 
   .merch-intro {
@@ -160,16 +159,16 @@
     font-size: 15px;
   }
 
-  .samarbejde {
+  .spejdersport {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 198px;
   }
-  .samarbejde-tekst {
+  .spejdersport-tekst {
     max-width: 560px;
   }
-  .samarbejde-titel {
+  .spejdersport-titel {
     font-size: 48px;
   }
 }

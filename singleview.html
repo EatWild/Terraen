@@ -1,27 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Inter:wght@500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/singleview.css">
-    <meta name="robots" content="noindex, nofollow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=Inter:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/singleview.css" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <script src="js/generel.js" defer></script>
     <script src="js/index.js" defer></script>
     <script src="js/singleview.js" defer></script>
-    <link rel="icon" href="favicon/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="favicon/favicon.png">
     <title>Opskrift</title>
-</head>
+  </head>
 
-<body>
-    <header></header>
+  <body>
+    <header>
+      <nav class="headernav">
+        <a href="/" class="logo">
+          <img src="imgs/logo-sort.webp" alt="Logo for Terræn, en bølget spiral inspireret af et topografisk kort." />
+          <p class="logo-txt">Terræn</p>
+        </a>
+        <button class="menuikon" aria-label="Åben mobil menu">
+          <span class="toplinje"></span>
+          <span class="midterlinje"></span>
+          <span class="bundlinje"></span>
+        </button>
+        <ul class="headermenu">
+          <li><span class="line"></span></li>
+          <li><a id="visiting" class="navlink" href="productlist.html">Opskrifter</a></li>
+          <li><span class="line"></span></li>
+          <li><a class="navlink" href="merch.html">Merch</a></li>
+          <li><span class="line"></span></li>
+          <li><a class="navlink p-btm" href="https://www.spejdersport.dk/" target="_blank">Spejdersport &#129125;</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="singleview">
         <div class="opskriftIndhold">
@@ -43,7 +63,26 @@
         </section>
     </main>
 
-    <footer></footer>
-</body>
-
+    <footer>
+      <nav class="footernav">
+        <div class="logo">
+          <img src="imgs/logo-hvid.webp" alt="Logo for Terræn, en bølget spiral inspireret af et topografisk kort." />
+          <div class="logo-txt-box">
+            <p class="footerlogo">Terræn</p>
+            <p class="logo-txt">Opskrifter til hvor du er</p>
+          </div>
+          <p class="samarbejde">Et samarbejde med Spejdersport</p>
+        </div>
+        <ul class="footermenu">
+          <li><a class="navlink" href="productlist.html">Opskrifter</a></li>
+          <li><a class="navlink" href="merch.html">Merch</a></li>
+          <li><a class="navlink" id="orange" href="https://www.spejdersport.dk/" target="_blank">Spejdersport &#129125;</a></li>
+        </ul>
+        <div class="nyhedsbrev">
+          <p class="caps">Ugens ret på mail</p>
+          <div class="tilmeld"><input type="email" placeholder="din@mail.dk" /><a class="cta-btn" href="#">Tilmeld</a></div>
+        </div>
+      </nav>
+    </footer>
+  </body>
 </html>
