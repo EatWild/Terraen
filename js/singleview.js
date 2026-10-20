@@ -17,7 +17,6 @@ function showDetails(detail) {
   document.title = `Terræn — ${detail.name}`;
 
   opskriftIndhold.innerHTML = `
-    <section class="opskrift-top">
       <nav class="breadcrumbs">
         <ol>
           <li><a href="index.html">Forside</a></li>
@@ -25,14 +24,12 @@ function showDetails(detail) {
           <li class="breadcrumb-navn">${detail.name}</li>
         </ol>
       </nav>
+    <section class="opskrift-top">
       <img class="opskrift-billede" src="${detail.image}" alt="${detail.name}">
       <div class="opskrift-tekst">
         <h1 class="opskrift-titel">${detail.name}</h1>
         <dl class="info-liste">
-          <div class="info">
-            <dt>Udstyr</dt>
-            <dd></dd>
-          </div>
+
           <div class="info">
             <dt>Tid</dt>
             <dd>${tid(detail)}<br>${detail.prepTimeMinutes + detail.cookTimeMinutes} min i alt</dd>
@@ -46,13 +43,6 @@ function showDetails(detail) {
     </section>
 
     <section class="opskrift-detaljer">
-      <div class="fremgangsmaade">
-        <p class="caps lille-overskrift">Fremgangsmåde</p>
-        <h2 class="fremgangsmaade-titel">Sådan gør du</h2>
-        <ol class="trin-liste">
-          ${detail.instructions.map((step, i) => `<li><span class="trin-nummer">0${i + 1}</span><p>${step}</p></li>`).join("")}
-        </ol>
-      </div>
       <div class="pakkeliste">
         <p class="caps lille-overskrift">Pakkeliste</p>
         <h2 class="pakkeliste-titel">${detail.ingredients.length} ingredienser</h2>
@@ -63,6 +53,13 @@ function showDetails(detail) {
         <ul class="ingrediens-liste">
           ${detail.ingredients.map((ingrediens) => `<li><label><input type="checkbox"><span>${ingrediens}</span></label></li>`).join("")}
         </ul>
+      </div>
+      <div class="fremgangsmaade">
+        <p class="caps lille-overskrift">Fremgangsmåde</p>
+        <h2 class="fremgangsmaade-titel">Sådan gør du</h2>
+        <ol class="trin-liste">
+          ${detail.instructions.map((step, i) => `<li><span class="trin-nummer">0${i + 1}</span><p>${step}</p></li>`).join("")}
+        </ol>
       </div>
     </section>`;
 }
@@ -84,3 +81,8 @@ function tid(detail) {
 }
 
 loadData(detailURL);
+
+// <div class="info">
+//   <dt>Udstyr</dt>
+//   <dd></dd>
+// </div>;

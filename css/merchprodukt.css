@@ -1,6 +1,8 @@
 /* ---------- Brødkrummer ---------- */
 
-.breadcrumbs { padding: 24px var(--side-margin) 16px; }
+.breadcrumbs {
+  padding: 80px var(--side-margin) 16px;
+}
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
@@ -13,8 +15,12 @@
   content: "/";
   margin-right: 10px;
 }
-.breadcrumbs a { color: inherit; }
-.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs a {
+  color: inherit;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
 .breadcrumb-navn {
   font-family: "Inter";
   font-weight: 600;
@@ -53,7 +59,9 @@
   object-fit: cover;
 }
 .thumb.aktiv,
-.thumb:hover { border-color: var(--color-green700); }
+.thumb:hover {
+  border-color: var(--color-green700);
+}
 
 /* Info */
 .produkt-info {
@@ -62,7 +70,6 @@
   align-items: flex-start;
   gap: 16px;
 }
-
 
 .produkt-titel {
   font-size: 48px;
@@ -123,7 +130,9 @@
   width: 100%;
   border-top: 1px solid var(--color-green900);
 }
-.fold-ud details { border-bottom: 1px solid var(--color-green900); }
+.fold-ud details {
+  border-bottom: 1px solid var(--color-green900);
+}
 .fold-ud summary {
   display: flex;
   justify-content: space-between;
@@ -133,14 +142,18 @@
   cursor: pointer;
   list-style: none;
 }
-.fold-ud summary::-webkit-details-marker { display: none; }
+.fold-ud summary::-webkit-details-marker {
+  display: none;
+}
 .fold-ud summary::after {
   content: "+";
   font-weight: 300;
   font-size: 24px;
   line-height: 1;
 }
-.fold-ud details[open] summary::after { content: "−"; }
+.fold-ud details[open] summary::after {
+  content: "−";
+}
 .fold-ud details p {
   padding-bottom: 16px;
   font-weight: 300;
@@ -154,7 +167,9 @@
   gap: 8px;
   padding: 0 var(--side-margin);
 }
-.mere-merch-titel { font-size: 36px; }
+.mere-merch-titel {
+  font-size: 36px;
+}
 .se-al-merch {
   font-weight: 500;
   text-transform: uppercase;
@@ -162,18 +177,24 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.mereMerchListe { padding-top: 24px; }
+.mereMerchListe {
+  padding-top: 24px;
+}
 
 /* ---------- Desktop ---------- */
 
 @media (min-width: 1200px) {
-  .breadcrumbs { padding: 60px var(--side-margin) 20px; }
+  .breadcrumbs {
+    padding: 80px var(--side-margin) 20px;
+  }
   .breadcrumbs ol {
     font-size: 16px;
     letter-spacing: 0.02em;
     gap: 12px;
   }
-  .breadcrumbs li + li::before { margin-right: 12px; }
+  .breadcrumbs li + li::before {
+    margin-right: 12px;
+  }
 
   .produkt {
     flex-direction: row;
@@ -185,16 +206,26 @@
     flex: 0 0 600px;
     gap: 12px;
   }
-  .thumbs { gap: 12px; }
-  .produkt-info { flex: 1; }
+  .thumbs {
+    gap: 12px;
+  }
+  .produkt-info {
+    flex: 1;
+  }
 
-  .produkt-titel { font-size: 64px; }
-  .produkt-pris { font-size: 40px; }
+  .produkt-titel {
+    font-size: 64px;
+  }
+  .produkt-pris {
+    font-size: 40px;
+  }
 
   .mere-merch-top {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
   }
-  .mere-merch-titel { font-size: 55px; }
+  .mere-merch-titel {
+    font-size: 55px;
+  }
 }
