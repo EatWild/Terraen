@@ -30,6 +30,7 @@
 }
 
 .breadcrumbs {
+  display: none;
   padding: 0 var(--side-margin);
 }
 .breadcrumbs ol {
@@ -73,8 +74,8 @@
 }
 
 .info-liste {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   padding: 16px 0;
   color: var(--color-black);
@@ -98,8 +99,8 @@
 /* ---------- Opskrift ---------- */
 
 .opskrift-detaljer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
   gap: 40px;
   padding-bottom: 80px;
 }
@@ -220,21 +221,21 @@
 /* ---------- Udstyr til turen (Spejdersport) ---------- */
 
 .udstyr {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 32px;
   margin-bottom: 80px;
   padding: 80px var(--side-margin);
-  background-color: var(--color-green700);
   color: var(--color-light);
 }
-
+.udstyr-bg {
+  background-color: var(--color-green700);
+}
 /* Billede */
 .udstyr-billede {
   position: relative;
 }
 .udstyr-billede img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -251,8 +252,7 @@
 }
 
 .udstyr-tekst {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 16px;
 }
 .udstyr .lille-overskrift {
@@ -287,24 +287,22 @@ footer {
 
 /* ---------- Desktop ---------- */
 
-@media (min-width: 1200px) {
-  .singleview {
-    --side-margin: 144px;
+@media (min-width: 800px) {
+  .opskriftIndhold {
+    max-width: 1200px;
+    margin-inline: auto;
   }
-
   .opskrift-top {
     display: grid;
-    grid-template-columns: 478px 1fr;
-    grid-template-areas:
-      "crumbs crumbs"
-      "img    txt";
+    grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     row-gap: 0;
     padding: 0 var(--side-margin) 80px;
   }
   .breadcrumbs {
+    display: block;
     grid-area: crumbs;
-    padding: 60px 0 20px;
+    padding: 80px 24px 20px;
   }
   .breadcrumbs ol {
     font-size: 16px;
@@ -315,16 +313,9 @@ footer {
     margin-right: 12px;
   }
 
-  .opskrift-billede {
-    grid-area: img;
-    order: 0;
-    height: 452px;
-    aspect-ratio: auto;
-  }
   .opskrift-tekst {
-    grid-area: txt;
-    justify-content: space-between;
-    gap: 24px;
+    width: auto;
+    gap: 48px;
     padding: 0;
   }
   .opskrift-titel {
@@ -334,11 +325,11 @@ footer {
     letter-spacing: 0.04em;
     color: var(--color-black);
   }
-  .info-liste {
+  /* .info-liste {
     flex-direction: row;
     gap: 64px;
     padding: 0;
-  }
+  } */
   .info-liste dd {
     font-family: "Outfit";
     font-weight: 200;
@@ -352,10 +343,10 @@ footer {
     gap: 48px;
     padding: 40px var(--side-margin) 80px;
   }
-  .pakkeliste {
+  /* .pakkeliste {
     order: -1;
     flex: 0 0 500px;
-  }
+  } */
   .pakkeliste-titel {
     font-family: "Inter";
     font-weight: 500;
@@ -378,6 +369,8 @@ footer {
     align-items: center;
     gap: 80px;
     margin-bottom: 198px;
+    max-width: 1200px;
+    justify-self: center;
   }
   .udstyr-titel {
     font-size: 48px;
