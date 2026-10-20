@@ -34,11 +34,19 @@ Sort: var(--color-black);
   transform: translate(-50%, -50%);
   text-align: center;
   place-items: center;
-  color: var(--color-light);
+  color: var(--color-green900);
   width: 90%;
   h2 {
     margin-bottom: 3rem;
   }
+}
+.logo_text {
+  display: flex;
+  flex-direction: row;
+}
+.logo_text img {
+  width: 20%;
+  padding-right: 10px;
 }
 
 .our_idea {
@@ -47,7 +55,7 @@ Sort: var(--color-black);
   background-color: var(--color-green700);
   color: var(--color-light);
   text-align: center;
-  padding: 30px 70px;
+  padding: 70px 60px 90px 60px;
   place-items: center;
   h3 {
     z-index: 3;
@@ -56,9 +64,15 @@ Sort: var(--color-black);
     z-index: 3;
   }
 }
+.first_idea {
+  padding: 100px 90px 140px 90px;
+  h3 {
+    padding-bottom: 30px;
+  }
+}
 .detail {
   position: absolute;
-  width: 100%;
+  width: 130%;
   object-fit: cover;
   opacity: 11%;
   inset: 0;
@@ -94,6 +108,7 @@ Sort: var(--color-black);
 
 .ide {
   font-size: 24px;
+  padding-bottom: 20px;
 }
 .citat {
   position: relative;
@@ -131,7 +146,7 @@ Sort: var(--color-black);
 .gallery_section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 90px 25px 70px 25px;
 }
 .gallery_wrapper {
   position: relative;
@@ -247,19 +262,44 @@ Sort: var(--color-black);
 .gallery_dots .dot:hover {
   background: var(--color-green900);
 }
+footer {
+  margin: 0;
+}
 
 @media (max-width: 800px) {
   .gallery_card {
     flex: 0 0 100%;
   }
-  .gallery_arrow {
+  /* .gallery_arrow {
     width: 36px;
     height: 36px;
-  }
+  } */
 }
 
 /* Desktop */
 @media (min-width: 800px) {
+  .hero {
+    height: 100%;
+  }
+  h1 {
+    letter-spacing: 3px;
+    font-size: 80px;
+  }
+  .food_ide {
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 3px;
+  }
+  .first_idea h3 {
+    padding-bottom: 10px;
+  }
+  .logo_text {
+    margin-left: 100px;
+  }
+  .logo_text img {
+    padding-top: 10px;
+  }
+
   .citat h2,
   .citat p {
     position: absolute;
@@ -277,6 +317,13 @@ Sort: var(--color-black);
   }
   .hover_text {
     visibility: hidden;
+  }
+  .gallery_section {
+    padding: 120px 25px;
+    p {
+      margin-bottom: 20px;
+      width: 55ch;
+    }
   }
   .gallery_card:hover img {
     transform: scale(1.02);
