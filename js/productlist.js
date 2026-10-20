@@ -20,25 +20,25 @@ function getData() {
 //Manuel fordeling af udstyr pr opskrift
 const udstyrPrOpskrift = {
   1: ["gryde-baal", "pande"], // Classic Margherita Pizza
-  2: ["trangia", "Pande"], // Vegetarian Stir-Fry
+  2: ["trangia", "pande"], // Vegetarian Stir-Fry
   3: ["gryde-baal"], // Chocolate Chip Cookies
-  4: ["trangia", "Pande"], // Chicken Alfredo Pasta
-  5: ["baal-rist", "Pande"], // Mango Salsa Chicken
+  4: ["trangia", "pande"], // Chicken Alfredo Pasta
+  5: ["baal-rist", "pande"], // Mango Salsa Chicken
   6: ["trangia"], // Quinoa Salad with Avocado
-  7: ["baal-rist", "Pande"], // Tomato Basil Bruschetta
-  8: ["Pande", "trangia"], // Beef and Broccoli Stir-Fry
+  7: ["baal-rist", "pande"], // Tomato Basil Bruschetta
+  8: ["pande", "trangia"], // Beef and Broccoli Stir-Fry
   9: ["ingen-ild"], // Caprese Salad
-  10: ["trangia", "Pande"], // Shrimp Scampi Pasta
+  10: ["trangia", "pande"], // Shrimp Scampi Pasta
   11: ["gryde-baal"], // Chicken Biryani
-  12: ["Pande", "gryde-baal"], // Chicken Karahi
-  13: ["gryde-baal", "Pande"], // Aloo Keema
-  14: ["Pande"], // Chapli Kebabs
-  15: ["gryde-baal", "Pande"], // Saag with Makki di Roti
+  12: ["pande", "gryde-baal"], // Chicken Karahi
+  13: ["gryde-baal", "pande"], // Aloo Keema
+  14: ["pande"], // Chapli Kebabs
+  15: ["gryde-baal", "pande"], // Saag with Makki di Roti
   16: ["trangia"], // Japanese Ramen Soup
   17: ["gryde-baal", "trangia"], // Moroccan Chickpea Tagine
-  18: ["Pande", "baal-rist"], // Korean Bibimbap
-  19: ["gryde-baal", "Pande"], // Greek Moussaka
-  20: ["gryde-baal", "Pande", "forberedt-hjemme"], // Butter Chicken (Murgh Makhani)
+  18: ["pande", "baal-rist"], // Korean Bibimbap
+  19: ["gryde-baal", "pande"], // Greek Moussaka
+  20: ["gryde-baal", "pande", "forberedt-hjemme"], // Butter Chicken (Murgh Makhani)
   21: ["trangia", "gryde-baal"], // Thai Green Curry
   22: ["ingen-ild"], // Mango Lassi
   23: ["forberedt-hjemme", "ingen-ild"], // Italian Tiramisu
@@ -46,30 +46,31 @@ const udstyrPrOpskrift = {
   25: ["ingen-ild"], // Blueberry Banana Smoothie
   26: ["baal-rist"], // Mexican Street Corn (Elote)
   27: ["gryde-baal"], // Russian Borscht
-  28: ["Pande", "trangia", "forberedt-hjemme"], // South Indian Masala Dosa
-  29: ["Pande", "trangia"], // Lebanese Falafel Wrap
+  28: ["pande", "trangia", "forberedt-hjemme"], // South Indian Masala Dosa
+  29: ["pande", "trangia"], // Lebanese Falafel Wrap
   30: ["ingen-ild"], // Brazilian Caipirinha
-  31: ["gryde-baal", "Pande"], // Spanish Patatas Bravas
+  31: ["gryde-baal", "pande"], // Spanish Patatas Bravas
   32: ["trangia", "ingen-ild"], // Vietnamese Fresh Spring Rolls
   33: ["trangia"], // Mediterranean Quinoa Salad
   34: ["forberedt-hjemme"], // Japanese Matcha Green Tea Ice Cream
   35: ["trangia"], // Brazilian Chocolate Brigadeiros
   36: ["gryde-baal"], // Mexican Chicken Enchiladas
-  37: ["trangia", "Pande"], // Thai Coconut Shrimp Curry
+  37: ["trangia", "pande"], // Thai Coconut Shrimp Curry
   38: ["gryde-baal"], // Greek Spanakopita
   39: ["trangia"], // Moroccan Couscous Salad
   40: ["ingen-ild"], // Classic Mojito
-  41: ["baal-rist", "Pande"], // Caprese Bruschetta
-  42: ["trangia", "Pande"], // Teriyaki Chicken Stir-Fry
+  41: ["baal-rist", "pande"], // Caprese Bruschetta
+  42: ["trangia", "pande"], // Teriyaki Chicken Stir-Fry
   43: ["ingen-ild"], // Mango Avocado Salsa
-  44: ["trangia", "Pande"], // Shrimp and Asparagus Stir-Fry
-  45: ["gryde-baal", "Pande"], // Italian Margherita Pizza
+  44: ["trangia", "pande"], // Shrimp and Asparagus Stir-Fry
+  45: ["gryde-baal", "pande"], // Italian Margherita Pizza
   46: ["trangia"], // Pesto Pasta with Cherry Tomatoes
   47: ["spyd", "baal-rist"], // Hawaiian Chicken Skewers
   48: ["forberedt-hjemme", "ingen-ild"], // Cucumber Avocado Rolls
   49: ["ingen-ild"], // Mediterranean Chickpea Salad
   50: ["ingen-ild"], // Pineapple Coconut Smoothie
 };
+console.log(udstyrPrOpskrift[4]);
 
 let selectedEquipment = "alle";
 //Vægt (antal ingredienser)--------------------------------------
