@@ -52,6 +52,8 @@ Sort: var(--color-black);
 .our_idea {
   position: relative;
   overflow: hidden;
+  background: url("../imgs/pattern.webp") no-repeat;
+  background-size: cover;
   background-color: var(--color-green700);
   color: var(--color-light);
   text-align: center;
@@ -70,7 +72,7 @@ Sort: var(--color-black);
     padding-bottom: 30px;
   }
 }
-.detail {
+/* .detail {
   position: absolute;
   width: 130%;
   object-fit: cover;
@@ -78,7 +80,7 @@ Sort: var(--color-black);
   inset: 0;
   pointer-events: none;
   z-index: 0;
-}
+} */
 /* .arrow {
   border: solid var(--color-green900);
   border-width: 0 3px 3px 0;
